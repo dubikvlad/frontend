@@ -1,0 +1,119 @@
+.swiper-wrapper {
+  position: relative;
+  background-color: var(--block-bg-color);
+
+  .swiper {
+    margin: 0 40px;
+
+    & > div:not(.previous, .next) {
+      & > div {
+        border: 1px solid var(--border-color);
+        border-left: 1px solid transparent;
+
+        &:first-child {
+          border-left: 1px solid var(--border-color);
+        }
+      }
+    }
+  }
+
+  .previous,
+  .next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: var(--z-index-initial);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 40px;
+    cursor: pointer;
+
+    svg {
+      path {
+        fill: var(--text-color);
+      }
+    }
+
+    &.disabled {
+      cursor: not-allowed;
+      opacity: 0.4;
+    }
+  }
+
+  .previous {
+    left: 0;
+
+    .previous-shadow-after {
+      position: absolute;
+      top: 0;
+      right: -8px;
+      bottom: 0;
+      display: block;
+      width: 8px;
+      pointer-events: none;
+      background: linear-gradient(90deg, var(--border-color), transparent);
+    }
+  }
+
+  .next {
+    right: 0;
+
+    .next-shadow-before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -8px;
+      display: block;
+      width: 8px;
+      pointer-events: none;
+      background: linear-gradient(270deg, var(--border-color), transparent);
+    }
+  }
+}
+
+.slide-slide-wrapper {
+  padding: 10px 26px 8px;
+
+  .teams {
+    display: grid;
+    gap: 13px;
+
+    .team {
+      display: grid;
+      grid-template-columns: 30px 1fr auto;
+      gap: 25px;
+      align-items: center;
+
+      &.winner {
+        opacity: 0.5;
+      }
+
+      .result {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+      }
+
+      .statistic {
+        font-size: 12px;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .date-and-stage-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13px;
+
+    p {
+      font-family: var(--inter);
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 15px;
+      color: var(--text-color);
+      opacity: 0.5;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.list-option {
+  display: flex;
+  align-items: flex-start;
+  font-size: 14px;
+
+  &:not(.disabled) {
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--text-color);
+
+      p {
+        color: var(--stroke-color);
+      }
+    }
+  }
+}
+
+.input {
+  display: none;
+}
+
+.bold {
+  font-weight: 600;
+}

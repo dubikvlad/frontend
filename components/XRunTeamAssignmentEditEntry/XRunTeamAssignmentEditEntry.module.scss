@@ -1,0 +1,125 @@
+.main {
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name {
+    margin-left: 20px;
+}
+
+.nickname {
+    display: flex;
+    align-items: center;
+
+    svg {
+        height: 13px;
+        cursor: pointer;
+
+        path {
+            fill: var(--stroke-color);
+        }
+
+        &:hover {
+            path {
+                fill: var(--text-color);
+            }
+        }
+    }
+}
+
+.full-name {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 23px;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 15px;
+    color: var(--text-color-2);
+    background-color: var(--win-color-2);
+    border-radius: 3px;
+}
+
+.team-rows-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+    padding-left: 40px;
+    border-left: 1px solid var(--border-color);
+}
+
+.return {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: var(--stroke-color);
+    cursor: pointer;
+
+    svg {
+        height: 7px;
+        margin-right: 10px;
+
+        path {
+            color: var(--stroke-color);
+            fill: var(--stroke-color);
+        }
+    }
+
+    &:hover {
+        color: var(--text-color);
+
+        svg {
+            height: 7px;
+            margin-right: 10px;
+
+            path {
+                color: var(--text-color);
+                fill: var(--text-color);
+            }
+        }
+    }
+}
+
+.team-row {
+    display: grid;
+    grid-template-columns: 3fr 1fr 10fr;
+
+    & > div:not(.select-container) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.select-container {
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+ 
+    & > div {
+        width: 250px;
+    }
+}

@@ -1,0 +1,40 @@
+.loading-wrapper {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  background-color: var(--block-bg-color);
+  animation: loading-opacity 0.5s ease forwards;
+
+  .preloader {
+    width: 70px;
+    height: 70px;
+    animation: preloader-rotate 1s linear infinite,
+      loading-opacity 0.5s ease forwards;
+
+    circle {
+      stroke: var(--bg-color-1);
+    }
+  }
+
+  @keyframes preloader-rotate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes loading-opacity {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}

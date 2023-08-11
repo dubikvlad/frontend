@@ -1,0 +1,10 @@
+.wrapper {
+  display: grid;
+  gap: 10px;
+}
+
+.no-data {
+  padding: 35px 30px;
+  background: var(--block-bg-color);
+  border-radius: 8px;
+}

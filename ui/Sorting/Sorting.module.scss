@@ -1,0 +1,26 @@
+.sorting-wrapper {
+  display: grid;
+  flex-shrink: 0;
+  gap: 1px;
+
+  svg {
+    width: 8px;
+    height: 6px;
+
+    path {
+      opacity: 0.5;
+      fill: var(--stroke-color);
+    }
+
+    &.active {
+      path {
+        opacity: 1;
+        fill: var(--text-color);
+      }
+    }
+  }
+
+  .arrow-top {
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,1 @@
+export { CreditsRules } from './CreditsRules'

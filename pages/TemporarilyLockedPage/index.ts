@@ -1,0 +1,1 @@
+export { TemporarilyLockedPage } from './TemporarilyLockedPage'

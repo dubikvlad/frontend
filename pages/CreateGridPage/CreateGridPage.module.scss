@@ -1,0 +1,22 @@
+.title {
+  display: flex;
+  gap: 33px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.data-wrapper {
+  padding: 40px 40px 50px;
+  margin-top: 20px;
+  background: var(--block-bg-color);
+  border-radius: 8px;
+}
+
+.data-title {
+  display: block;
+  margin-bottom: 35px;
+  font-family: var(--russo-one);
+  font-size: 24px;
+  text-transform: uppercase;
+  opacity: 0.3;
+}

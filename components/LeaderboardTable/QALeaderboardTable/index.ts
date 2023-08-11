@@ -1,0 +1,1 @@
+export { QALeaderboardTable } from './QALeaderboardTable'

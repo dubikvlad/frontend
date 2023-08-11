@@ -1,0 +1,30 @@
+.table {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 25px;
+}
+
+.table-col {
+  display: grid;
+  gap: 10px;
+}
+
+.col-title {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+}
+
+.col-item {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.inputs {
+  display: flex;
+  gap: 20px;
+}

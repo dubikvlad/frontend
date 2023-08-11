@@ -1,0 +1,48 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 238px 1fr;
+  gap: 10px;
+
+  .info-block {
+    height: 255px;
+    padding: 20px;
+    background: var(--block-bg-color);
+    border-radius: 8px;
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .history-block {
+    padding: 13px 20px 52px;
+    background: var(--block-bg-color);
+    border-radius: 8px;
+
+    .row {
+      display: grid;
+      grid-template-columns: 221px 339px 1fr;
+      justify-content: space-between;
+      padding: 20px 40px;
+
+      &:nth-child(even) {
+        background: var(--bg-color-3);
+      }
+
+      &.head {
+        p {
+          font-family: var(--russo-one);
+        }
+      }
+    }
+  }
+
+  .none-picks {
+    margin-top: 20px;
+    text-align: center;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}

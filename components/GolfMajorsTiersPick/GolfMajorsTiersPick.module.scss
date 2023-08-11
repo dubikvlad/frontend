@@ -1,0 +1,209 @@
+.container {
+    background-color: #fff;
+    padding: 16px 20px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 20px;
+}
+
+.tier {
+    &-picks {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+
+        &.deadline {
+            .tier-item {
+                pointer-events: none;
+                background-color: var(--border-color);
+                color: var(--stroke-color);
+
+                &.picked {
+                    background-color: var(--blue-disabled);
+                }
+            }
+            
+            .pagination-wrapper {
+                background-color: var(--border-color);
+                
+                * {
+                    color: var(--stroke-color);
+                    pointer-events: none;
+                }
+            }
+        }
+
+    }
+
+    &-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 8px 8px 0 0;
+        margin-bottom: 5px;
+        font-weight: bold;
+
+        &.picked {
+            color: var(--success-color);
+        }
+
+        svg {
+            * {
+                fill: var(--success-color);
+            }
+        }
+    }
+
+    &-body {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+
+        &:not(.expand) {
+            > div:last-child {
+                border-radius: 0 0 8px 8px;
+            }
+        }
+    }
+
+    &-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background-color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all var(--transition-duration) ease;
+
+        div + div {
+            font-weight: bold;
+        }
+
+        &.picked {
+            background-color: var(--button-blue-color);
+            color: #fff;
+        }
+
+        &.disabled {
+            position: relative;
+            color: var(--stroke-color);
+            pointer-events: none;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 10px;
+                content: "\2715";
+                font-size: 12px;
+            }
+        }
+
+        &.no-data {
+            color: var(--stroke-color);
+            pointer-events: none;
+        }
+
+        &.empty {
+            padding: 0;
+            height: 44px;
+            pointer-events: none;
+        }
+
+        &:hover:not(.picked),
+        &:hover:not(.disabled),
+        &:hover:not(.empty) {
+            box-shadow: 0px 0px 0px 1px var(--text-color);
+        }
+
+        &.deadline {
+            .tier-item {
+                opacity: 0.6;
+            }
+        }
+    }
+
+    &-show-more {
+        padding: 10px 20px;
+        background-color: #fff;
+        border-radius: 0 0 8px 8px;
+        color: var(--button-blue-color);
+        cursor: pointer;
+
+        &:hover {
+            color: var(--button-light-hover-color);
+        }
+    }
+}
+
+.tiebreak {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0 20px;
+
+    .input {
+        max-width: 80px;
+    }
+
+    &-info {
+        > div {
+            font-size: 12px;
+            display: flex;
+            margin-top: 15px;
+
+            div + div {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.skeleton {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .sk {
+        border-radius: 8px;
+
+        > div {
+            &:first-child {
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.pagination-wrapper {
+    display: grid;
+    grid-template-columns: 7px 1fr 7px;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--block-bg-color);
+    border-radius: 0 0 8px 8px;
+    margin-top: 5px;
+
+    .arrow {
+        cursor: pointer;
+        user-select: none;
+        transition: var(--transition-duration) opacity;
+
+        path {
+            fill: var(--text-color);
+        }
+
+        &.arrow-hide {
+            pointer-events: none;
+            opacity: 0;
+        }
+    }
+
+    p {
+        justify-self: center;
+    }
+}

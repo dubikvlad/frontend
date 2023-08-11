@@ -1,0 +1,51 @@
+.wrapper {
+  display: grid;
+  gap: 10px;
+}
+
+.not-found {
+  padding: 27px 30px;
+  background-color: var(--block-bg-color);
+}
+
+.grid {
+  grid-template-columns: 4.5% 4.5% 31% 43% repeat(2, 1fr);
+}
+
+.item-name-wrap {
+  height: 23px;
+
+  .item-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 23px;
+    margin: 0 2px;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: var(--text-color-2);
+    border-radius: 3px;
+  }
+}
+
+.team-head-title {
+  padding-left: 86px;
+}
+
+.cell-center {
+  text-align: center;
+}
+
+.team-info {
+  display: flex;
+  align-items: center;
+  padding: 5px 8px 5px 5px;
+
+  & p {
+    padding-left: 21px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,246 @@
+.wrapper {
+  display: grid;
+  gap: 20px;
+}
+
+.steps-wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  user-select: none;
+
+  p {
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--stroke-color);
+    cursor: pointer;
+
+    &.step-active {
+      color: var(--text-color);
+      pointer-events: none;
+    }
+
+    &.step-disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  svg {
+    width: 6px;
+    height: auto;
+    opacity: 0.5;
+
+    path {
+      stroke: var(--text-color);
+    }
+  }
+}
+
+.title {
+  margin: 20px 0 30px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+}
+
+.step1 {
+  display: grid;
+  gap: 20px;
+
+  .email-recipient-selection-wrapper {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 20px;
+
+    .email-recipient-selection-description {
+      padding: 20px;
+      background-color: var(--block-bg-color);
+      border-radius: 8px;
+
+      .text {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 140%;
+      }
+    }
+
+    .options {
+      display: grid;
+      gap: 10px;
+
+      & > div {
+        display: grid;
+        grid-template-columns: 210px 1fr;
+        gap: 20px;
+        align-items: center;
+        padding: 15px 20px;
+        background-color: var(--block-bg-color);
+        border-radius: 8px;
+
+        & > p {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 19px;
+        }
+
+        & > div {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+
+          &.pool-members {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+          }
+
+          button {
+            &.option-active {
+              color: var(--text-color-2);
+              background-color: var(--button-blue-color);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .next {
+    max-width: 170px;
+    margin-left: auto;
+  }
+}
+
+.step2 {
+  display: grid;
+  gap: 20px;
+
+  .sending-mail-wrapper {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 20px;
+
+    .sending-mail-description {
+      padding: 20px;
+      background: var(--block-bg-color);
+      border-radius: 8px;
+
+      .description-wrapper {
+        display: grid;
+        gap: 10px;
+
+        p {
+          font-size: 14px;
+          line-height: 140%;
+
+          span {
+            font-size: inherit;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .sending-mail {
+      padding: 20px 20px 40px;
+      background: var(--block-bg-color);
+      border-radius: 8px;
+
+      .recipients-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 10px;
+
+        p {
+          font-weight: 600;
+          line-height: 19px;
+
+          span {
+            font-weight: inherit;
+          }
+        }
+
+        button {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          max-width: 170px;
+
+          p {
+            font-size: 14px;
+          }
+
+          &.copied {
+            svg {
+              width: 16px;
+              height: auto;
+
+              rect,
+              path {
+                fill: var(--text-color-3);
+              }
+            }
+          }
+        }
+      }
+
+      .emails-list-wrapper {
+        display: grid;
+        gap: 5px;
+        max-height: 230px;
+        padding-right: 7px;
+        margin-top: 20px;
+        overflow-y: auto;
+
+        @include mixins.scroll;
+
+        & > div {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+
+          .email-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 10px;
+            gap: 10px;
+            align-items: center;
+            padding: 0 20px;
+            background: var(--border-color);
+            border-radius: 8px;
+
+            .cross-wrapper {
+              cursor: pointer;
+              user-select: none;
+
+              svg {
+                width: 9px;
+                height: 9px;
+
+                path {
+                  stroke: var(--stroke-color);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .form {
+        display: grid;
+        gap: 10px;
+        margin-top: 40px;
+
+        .textarea {
+          textarea {
+            min-height: 320px;
+          }
+        }
+      }
+    }
+  }
+
+  .send-email {
+    max-width: 170px;
+    margin-left: auto;
+  }
+}

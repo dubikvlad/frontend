@@ -1,0 +1,55 @@
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  height: fit-content;
+  padding: 7px 12px 7px 48px;
+  background-color: var(--block-bg-color);
+
+  &.border-left {
+    &:nth-child(2n+1) {
+      border-left: 4px solid var(--error-color);
+    }
+
+    &:nth-child(2n) {
+      border-left: 4px solid var(--button-light-hover-color);
+    }
+  }
+}
+
+.teams-wrapper {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.teams {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 75.5px;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  opacity: 0.7;
+}
+
+.team {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  justify-content: flex-end;
+
+  &:last-child {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+}
+
+.img {
+  width: auto;
+  height: auto;
+}

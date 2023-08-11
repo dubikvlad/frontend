@@ -1,0 +1,44 @@
+.container {
+  min-height: 400px;
+}
+
+.head {
+  display: grid;
+  grid-template-columns: 227px 1fr;
+  column-gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+
+  .year-to-date-tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    background-color: var(--block-bg-color);
+    border: 1px solid transparent;
+    border-radius: 8px 0 0 8px;
+    transition: var(--transition-duration);
+
+    span {
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 19px;
+      color: var(--stroke-color);
+      transition: var(--transition-duration);
+    }
+
+    &.active span,
+    &:hover span {
+      color: var(--text-color);
+    }
+
+    &.active,
+    &:hover {
+      border-color: var(--text-color);
+    }
+  }
+}

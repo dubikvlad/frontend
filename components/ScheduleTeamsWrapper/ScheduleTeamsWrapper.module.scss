@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+
+  span {
+    font-family: var(--russo-one);
+    font-size: 14px;
+    text-transform: uppercase;
+    opacity: 0.4;
+  }
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+  border-radius: 8px;
+}

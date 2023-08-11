@@ -1,0 +1,99 @@
+.wrapper {
+  display: grid;
+  gap: 3px;
+}
+
+.head-wrapper {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 10px;
+  background-color: var(--block-bg-color);
+  border-radius: 8px 8px 0 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  width: 100%;
+  padding: 5px 10px 5px 20px;
+
+  &.head {
+    font-size: 14px;
+
+    .names {
+      gap: 10px;
+      padding-left: 48px;
+      color: var(--stroke-color);
+      cursor: pointer;
+      user-select: none;
+
+      &.active {
+        color: var(--text-color);
+      }
+    }
+  }
+
+  .names {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.points {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+  .point {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    min-height: 40px;
+    padding: 5px;
+
+    &.big-icon {
+      width: 55px;
+    }
+
+    &.red {
+      background: var(--error-color);
+    }
+
+    &.active-number {
+      background: var(--button-blue-color-op01);
+    }
+  }
+}
+
+.body {
+  padding: 15px 10px 30px;
+  background-color: var(--block-bg-color);
+  border-radius: 0 0 8px 8px;
+
+  .names {
+    display: flex;
+    gap: 20px;
+  }
+
+  .row {
+    &:nth-child(odd) {
+      background: var(--bg-color-3);
+    }
+  }
+
+  .point {
+    border-radius: 3px;
+  }
+}
+
+.not-found {
+  padding: 27px 30px;
+  background-color: var(--block-bg-color);
+
+  span {
+    font-weight: 600;
+    word-break: break-all;
+  }
+}

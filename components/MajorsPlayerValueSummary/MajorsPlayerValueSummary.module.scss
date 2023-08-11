@@ -1,0 +1,27 @@
+.select-wrap {
+  margin-bottom: 20px;
+}
+
+.grid {
+  grid-template-columns: 25% repeat(2, 15%) 6% 1fr;
+
+  .points {
+    font-weight: 600;
+    color: var(--success-color);
+
+    &.minus {
+      color: var(--error-color)
+    }
+  }
+
+  .value {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+  }
+
+  .scale {
+    height: 20px;
+    border-radius: 15px;
+  }
+}

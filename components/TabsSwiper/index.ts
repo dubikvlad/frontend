@@ -1,0 +1,1 @@
+export { TabsSwiper } from './TabsSwiper'

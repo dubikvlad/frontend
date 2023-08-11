@@ -1,0 +1,27 @@
+.wrapper {
+  padding: 30px 20px;
+  background: var(--block-bg-color);
+  border-radius: 0 0 8px 8px;
+}
+
+.input-wrapper {
+  position: relative;
+
+  input {
+    padding-right: 230px !important;
+  }
+
+  .button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    font-family: var(--russo-one);
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

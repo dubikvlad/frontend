@@ -1,0 +1,10 @@
+.head {
+  padding: 22px;
+  background-color: var(--block-bg-color);
+  border-radius: 8px;
+}
+
+.grid {
+  grid-template-columns: 7% 1fr repeat(3, 20%);
+  border-bottom: 0;
+}

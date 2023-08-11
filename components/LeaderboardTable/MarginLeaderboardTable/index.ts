@@ -1,0 +1,1 @@
+export { MarginLeaderboardTable } from './MarginLeaderboardTable'

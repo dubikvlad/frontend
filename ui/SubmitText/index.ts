@@ -1,0 +1,1 @@
+export { SubmitText } from './SubmitText'

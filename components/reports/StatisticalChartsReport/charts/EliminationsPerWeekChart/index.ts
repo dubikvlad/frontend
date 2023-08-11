@@ -1,0 +1,1 @@
+export { EliminationsPerWeekChart } from './EliminationsPerWeekChart'

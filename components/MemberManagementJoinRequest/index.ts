@@ -1,0 +1,1 @@
+export { MemberManagementJoinRequest } from './MemberManagementJoinRequest'

@@ -1,0 +1,35 @@
+.grid {
+  display: grid;
+  grid-template-columns: 30px 52px 1fr 140px 140px 160px 160px 100px 110px;
+
+  &.small {
+    grid-template-columns: 30px 52px 1fr 140px 140px 160px 160px 110px;
+  }
+}
+
+.search {
+  margin-bottom: 10px;
+}
+
+.star-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .star {
+    path {
+      stroke: var(--favorites-color);
+    }
+  }
+}
+
+.not-found {
+  padding: 27px 30px;
+  background-color: var(--block-bg-color);
+  border-radius: 8px;
+
+  span {
+    font-weight: 600;
+    word-break: break-all;
+  }
+}

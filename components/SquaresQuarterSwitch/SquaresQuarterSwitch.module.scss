@@ -1,0 +1,44 @@
+.quarter-switch-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 86px;
+  margin-bottom: 10px;
+  user-select: none;
+  background: var(--block-bg-color);
+  border-radius: 8px 8px 0 0;
+
+  & > div {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.5;
+
+    &.quarter-switch-active {
+      opacity: 1;
+
+      svg {
+        opacity: 1;
+      }
+    }
+
+    p {
+      font-family: var(--russo-one);
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    svg {
+      width: 6px;
+      height: auto;
+      opacity: 0;
+
+      path {
+        fill: var(--text-color);
+      }
+    }
+  }
+}

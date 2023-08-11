@@ -1,0 +1,79 @@
+.wrapper {
+  padding: 20px 40px;
+  background: var(--block-bg-color);
+  border-radius: 8px;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.eliminations-label,
+.week-label {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--stroke-color);
+}
+
+.eliminations-label {
+  margin-bottom: 10px;
+}
+
+.week-label {
+  margin-top: 10px;
+  text-align: end;
+  text-transform: uppercase;
+}
+
+.bar-chart {
+  tspan {
+    font-family: var(--inter);
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-color);
+    opacity: 0.3;
+  }
+}
+
+.custom-tooltip {
+  display: grid;
+  gap: 20px;
+  width: 210px;
+  height: auto;
+  padding: 6px 20px 20px;
+  pointer-events: none;
+  background: var(--block-bg-color);
+  border: 1px solid var(--text-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgb(46 46 46 / 8%);
+
+  &:focus-visible {
+    outline: transparent;
+  }
+
+  &-title {
+    font-family: var(--inter);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 17px;
+    color: var(--text-color);
+    text-align: center;
+  }
+
+  &-eliminations {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+
+    span {
+      font-family: var(--inter);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 17px;
+      color: var(--text-color);
+    }
+  }
+}

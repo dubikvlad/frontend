@@ -1,0 +1,37 @@
+.wrapper {
+  display: grid;
+  gap: 30px;
+}
+
+.title {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.pictures {
+  display: flex;
+}
+
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  padding: 20px;
+  cursor: pointer;
+  background: var(--body-bg-color);
+  border: 1px dashed var(--stroke-color);
+  transition: border var(--transition-duration);
+
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--stroke-color);
+  }
+
+  &:hover {
+    border-color: var(--border-color-4);
+  }
+}

@@ -1,0 +1,51 @@
+.wrapper {
+  display: grid;
+  gap: 20px;
+  padding: 30px 20px 20px;
+  background: var(--block-bg-color);
+  border-radius: 0 0 8px 8px;
+}
+
+.forms {
+  display: flex;
+  gap: 20px;
+
+  .form {
+    flex: 1;
+  }
+}
+
+.checkbox {
+  display: flex;
+  gap: 15px;
+}
+
+.forms-end {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hide-input {
+  display: none;
+}
+
+.button {
+  width: 160px;
+  height: 60px;
+  text-transform: uppercase;
+}
+
+.error {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+  background-color: rgba(232 93 93 / 10%);
+  border: 1px solid var(--error-color);
+  border-radius: 8px;
+
+  &-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--error-color);
+  }
+}

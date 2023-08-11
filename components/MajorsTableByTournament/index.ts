@@ -1,0 +1,1 @@
+export { MajorsTableByTournament } from './MajorsTableByTournament'

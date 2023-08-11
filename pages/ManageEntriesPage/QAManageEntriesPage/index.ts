@@ -1,0 +1,1 @@
+export { QAManageEntriesPage } from './QAManageEntriesPage'

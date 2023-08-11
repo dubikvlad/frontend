@@ -1,0 +1,139 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 682px;
+  margin: 20px auto 0;
+
+  p {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+
+    @include adaptive.md {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &.intro {
+      @include adaptive.sm {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.title {
+  font-size: 36px;
+  line-height: 43px;
+  text-transform: uppercase;
+
+  @include adaptive.md {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  @include adaptive.sm {
+    align-self: flex-start;
+  }
+}
+
+.intro {
+  max-width: 555px;
+  margin-top: 15px;
+}
+
+.intro2 {
+  max-width: 685px;
+  margin-top: 30px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 316px);
+  gap: 50px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+
+  &.is-join-tab {
+    grid-template-columns: 1fr;
+  }
+
+  @include adaptive.md {
+    grid-template-columns: repeat(2, 240px);
+    gap: 30px;
+  }
+
+  @include adaptive.sm {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .button {
+    max-width: 316px;
+    height: 59px;
+  }
+}
+
+.join-btn-sm {
+  width: 100%;
+  height: 57px;
+}
+
+.or {
+  margin-top: 30px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--stroke-color);
+  text-transform: uppercase;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+
+  input {
+    padding-right: 230px !important;
+  }
+
+  .button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    font-family: var(--russo-one);
+    font-size: 16px;
+    font-weight: 400;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.invite-btn-wrap {
+  display: flex;
+  justify-content: center;
+  width: 316px;
+  height: 59px;
+  margin-top: 30px;
+
+  @include adaptive.md {
+    width: 240px;
+  }
+
+  @include adaptive.sm {
+    width: 164px;
+  }
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  padding: 10px 20px;
+  font-weight: 600;
+  background-color: var(--block-bg-color);
+  border-radius: 8px;
+}

@@ -1,0 +1,28 @@
+.item-name-wrap {
+  height: 23px;
+
+  .star {
+    margin: 0 auto;
+
+    path {
+      fill: var(--favorites-color);
+      stroke: var(--favorites-color);
+    }
+  }
+
+  .item-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 23px;
+    margin: 0 2px;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: var(--text-color-2);
+    border-radius: 3px;
+  }
+}
+
+

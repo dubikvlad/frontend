@@ -1,0 +1,49 @@
+.filter-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  min-height: 83px;
+  padding: 20px;
+  background: var(--block-bg-color);
+  border-radius: 8px;
+
+  &.filter-wrapper-disabled {
+    & > * {
+      &:not(.always-active) {
+        pointer-events: none;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  input {
+    max-width: 275px;
+  }
+
+  .members-select {
+    max-width: 330px;
+  }
+
+  .members-select-dropdown {
+    min-width: 250px !important;
+  }
+
+  .range-input {
+    max-width: 430px;
+    margin-left: 40px;
+  }
+}
+
+.button-wrapper {
+  flex-grow: 1;
+
+  button {
+    max-width: 190px;
+    margin-left: auto;
+
+    &.create-entry-button-hide {
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+}

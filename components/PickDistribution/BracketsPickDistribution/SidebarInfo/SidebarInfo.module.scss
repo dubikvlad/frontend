@@ -1,0 +1,23 @@
+.notification-wrapper {
+  position: sticky;
+  top: 156px;
+  width: 270px;
+  height: fit-content;
+  min-height: 574px;
+  padding: 30px 20px;
+  background-color: var(--block-bg-color);
+  border-radius: 8px;
+}
+
+.empty-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 574px;
+
+  .empty-info-title {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}

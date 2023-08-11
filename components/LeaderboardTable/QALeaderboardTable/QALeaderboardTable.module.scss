@@ -1,0 +1,34 @@
+.container {
+  display: grid;
+  gap: 10px;
+}
+
+.not-found {
+  padding: 27px 30px;
+  background-color: var(--block-bg-color);
+
+  span {
+    font-weight: 600;
+    word-break: break-all;
+  }
+}
+
+.star-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .star {
+    path {
+      stroke: var(--favorites-color);
+    }
+  }
+}
+
+.grid {
+  grid-template-columns: 3% 4.5% 30% repeat(2, 1fr) 15%;
+}
+
+.points {
+  font-weight: 600;
+}

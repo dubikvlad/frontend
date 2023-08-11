@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  background-color: #ffd4d4;
+
+  & > div {
+    display: grid;
+    gap: 5px;
+    justify-items: center;
+    padding: 15px;
+
+    svg {
+      max-width: 300px;
+      height: auto;
+      background-color: red;
+    }
+  }
+}

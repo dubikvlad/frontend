@@ -1,0 +1,36 @@
+.filter-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 22px 20px;
+  background: var(--block-bg-color);
+  border-radius: 8px;
+
+  &.filter-wrapper-disabled {
+    & > * {
+      pointer-events: none;
+      opacity: 0.6;
+    }
+  }
+
+  input {
+    max-width: 275px;
+  }
+
+  .members-select {
+    max-width: 330px;
+
+    &.range-visible {
+      max-width: 130px;
+    }
+  }
+
+  .members-select-dropdown {
+    min-width: 250px !important;
+  }
+
+  .range-input {
+    max-width: 430px;
+    margin-left: 40px;
+  }
+}

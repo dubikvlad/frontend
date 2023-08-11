@@ -1,0 +1,191 @@
+.description {
+  padding: 15px 0 50px;
+}
+
+.filter-and-deadline-wrapper {
+  margin-bottom: 30px;
+}
+
+.playoff-teams-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+
+  &.playoff-teams-wrapper-deadline {
+    .playoff-team-wrapper {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+
+  &.playoff-teams-wrapper-deadline-with-forecasts {
+    .playoff-team-wrapper {
+      .point-wrapper {
+        opacity: 0.5;
+      }
+
+      .team-wrapper {
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.playoff-team-wrapper-column {
+  display: grid;
+  gap: 10px;
+
+  & > p {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    color: var(--stroke-color);
+  }
+}
+
+.playoff-team-wrapper {
+  position: relative;
+  display: grid;
+  gap: 3px;
+}
+
+.playoff-team-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 3px;
+  height: 70px;
+
+  &.playoff-team-item-over {
+    .team-wrapper {
+      background-color: var(--bg-color-18);
+      border: 1px solid var(--text-color-3);
+    }
+  }
+
+  &.playoff-team-item-dragging {
+    .team-wrapper {
+      opacity: 0;
+    }
+  }
+
+  .point-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--russo-one);
+    font-size: 26px;
+    line-height: 31px;
+    background-color: var(--block-bg-color);
+  }
+
+  &:first-child {
+    .point-wrapper {
+      border-top-left-radius: 8px;
+    }
+
+    .team-wrapper {
+      border-top-right-radius: 8px;
+    }
+  }
+
+  &:last-child {
+    .point-wrapper {
+      border-bottom-left-radius: 8px;
+    }
+
+    .team-wrapper {
+      border-bottom-right-radius: 8px;
+    }
+  }
+}
+
+.team-wrapper {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 4px 20px;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--block-bg-color);
+  border: 1px solid var(--block-bg-color);
+  transition: var(--transition-duration) background-color,
+    var(--transition-duration) border-color, var(--transition-duration) opacity;
+
+  &.team-wrapper-dragging {
+    border-color: var(--text-color);
+  }
+
+  &:hover {
+    border-color: var(--text-color);
+  }
+
+  .team {
+    display: grid;
+
+    .team-city {
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    .team-name {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 22px;
+    }
+  }
+
+  .seed {
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--stroke-color);
+  }
+}
+
+.custom-drag-layer {
+  width: 300px;
+  height: 50px;
+  background-color: var(--block-bg-color);
+}
+
+.submit-button {
+  max-width: 290px;
+  margin: 30px auto 0;
+}
+
+.alert-danger {
+  margin-bottom: 20px;
+}
+
+.tiebreak-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 79px;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px 25px;
+  margin-top: 20px;
+  background-color: var(--block-bg-color);
+  border-radius: 8px;
+
+  p {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: end;
+
+    span {
+      font-weight: 400;
+      color: var(--stroke-color);
+    }
+  }
+
+  .tiebreak-input {
+    font-weight: 600;
+  }
+
+  &.tiebreak-wrapper-deadline {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}

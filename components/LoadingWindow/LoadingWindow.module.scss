@@ -1,0 +1,133 @@
+.loading-window {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-index-loading);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  user-select: none;
+  background-color: var(--body-bg-color);
+  opacity: 0;
+  transition: var(--transition-duration) opacity;
+
+  &.loading-window-show {
+    pointer-events: initial;
+    opacity: 1;
+  }
+
+  div {
+    position: relative;
+    width: 80px;
+    height: 80px;
+
+    svg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      // animation
+      animation-name: svg-animation-ball;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+      animation-delay: 1ms;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  .line {
+    width: 74px;
+    height: 5px;
+    background: var(--text-color);
+    border-radius: 14px;
+    opacity: 0.5;
+
+    // animation
+    animation-name: svg-animation-line;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 1ms;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes svg-animation-ball {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  13% {
+    margin-top: 5px;
+    transform: rotate(45deg);
+  }
+
+  25% {
+    transform: rotate(90deg);
+  }
+
+  38% {
+    margin-top: -10px;
+    transform: rotate(135deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  63% {
+    margin-top: 5px;
+    transform: rotate(225deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  88% {
+    margin-top: -10px;
+    transform: rotate(315deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes svg-animation-line {
+  0% {
+    width: 74px;
+  }
+
+  13% {
+    width: 90px;
+  }
+
+  25% {
+    width: 74px;
+  }
+
+  38% {
+    width: 40px;
+  }
+
+  50% {
+    width: 74px;
+  }
+
+  63% {
+    width: 90px;
+  }
+
+  75% {
+    width: 74px;
+  }
+
+  88% {
+    width: 40px;
+  }
+
+  100% {
+    width: 74px;
+  }
+}

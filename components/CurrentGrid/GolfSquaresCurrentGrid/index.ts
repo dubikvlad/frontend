@@ -1,0 +1,1 @@
+export { GolfSquaresCurrentGrid } from './GolfSquaresCurrentGrid'

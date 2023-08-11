@@ -1,0 +1,1 @@
+export { MajorsReportsPage } from './MajorsReportsPage'

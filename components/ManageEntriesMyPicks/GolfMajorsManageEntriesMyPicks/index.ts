@@ -1,0 +1,1 @@
+export { GolfMajorsManageEntriesMyPicks } from './GolfMajorsManageEntriesMyPicks'

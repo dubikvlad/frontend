@@ -1,0 +1,1 @@
+export { SquaresRules } from './SquaresRules'

@@ -1,0 +1,77 @@
+.container {
+    padding: 8px 20px;
+    padding-right: 24px;
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+}
+
+.title {
+    margin-bottom: 9px;
+    font-size: 10px;
+    color: var(--stroke-color);
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+
+    .text {
+        font-size: 14px;
+    }
+
+    .tip {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+
+        svg {
+            width: 25px;
+
+            path {
+                fill: var(--stroke-color);
+            }
+        }
+
+        .tooltip {
+            position: absolute;
+            top: 0;
+            right: 46px;
+            display: grid;
+            gap: 10px;
+            width: 357px;
+            height: auto;
+            padding: 20px;
+            pointer-events: none;
+            background-color: var(--block-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgb(46 46 46 / 8%);
+            opacity: 0;
+            transition: var(--transition-duration) opacity;
+        
+            .tooltip-title {
+              margin-bottom: 10px;
+              font-family: var(--russo-one);
+              color: var(--stroke-color);
+              text-transform: uppercase;
+            }
+        
+            & > div {
+              display: grid;
+              gap: 10px;
+        
+              p {
+                display: inline-block;
+              }
+            }
+          }
+        
+          &:hover {
+            .tooltip {
+              opacity: 1;
+            }
+          }
+    }
+}
+
+

@@ -1,0 +1,149 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 334px;
+  gap: 20px;
+}
+
+.info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info {
+  width: 100%;
+  padding: 20px 20px 40px;
+  background-color: var(--block-bg-color);
+  border-radius: 8px;
+}
+
+.title-wrapper {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.info-text {
+  padding-top: 20px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  border-top: 1px solid var(--border-color);
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.button-wrapper {
+  flex-grow: 1;
+  height: auto;
+
+  .button {
+    position: sticky;
+    top: 100px;
+    width: fit-content;
+    margin: 0 auto;
+    text-transform: uppercase;
+  }
+}
+
+// table
+
+.table {
+  display: grid;
+  gap: 5px;
+
+  .table-head-wrap {
+    padding: 16px 10px 17px;
+    background-color: var(--block-bg-color);
+    border-radius: 8px 8px 0 0;
+
+    .table-row {
+      padding: 0 10px;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--stroke-color);
+      text-align: left;
+    }
+  }
+
+  .table-body-wrap {
+    padding: 0 10px 20px;
+    background-color: var(--block-bg-color);
+    border-radius: 0 0 8px 8px;
+
+    .table-row {
+      padding: 0 10px;
+      text-align: left;
+      cursor: default;
+
+      &.clickable {
+        cursor: pointer;
+      }
+
+      &.disabled {
+        cursor: default;
+      }
+
+      .row-item {
+        padding-top: 13px;
+        padding-bottom: 13px;
+
+        &:nth-child(2) {
+          background: var(--bg-color-15);
+        }
+      }
+    }
+  }
+
+  .table-row {
+    display: grid;
+    grid-template-columns: 57px 90px 1fr 1fr 174px;
+
+    &:nth-child(even) {
+      background: var(--bg-color-3);
+    }
+
+    .row-item {
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.sort-wrapper {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+
+  &.active {
+    color: var(--text-color);
+  }
+}
+
+.no-data {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  background: var(--block-bg-color);
+  border-radius: 8px;
+}

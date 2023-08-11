@@ -1,0 +1,33 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  padding: 40px 40px 60px;
+  background: var(--block-bg-color);
+  border-radius: 8px;
+}
+
+.title {
+  font-family: var(--russo-one);
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  opacity: 0.3;
+}
+
+.close {
+  position: absolute;
+  top: 26px;
+  right: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+
+  .close-icon {
+    path {
+      stroke: var(--text-color);
+    }
+  }
+}

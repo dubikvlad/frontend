@@ -1,0 +1,56 @@
+.multi-range {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  user-select: none;
+
+  .left-range-value-text,
+  .right-range-value-text {
+    position: absolute;
+    bottom: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    white-space: nowrap;
+  }
+
+  .left-range-value-text {
+    left: 0%;
+    transform: translateX(-50%);
+  }
+
+  .right-range-value-text {
+    right: 0%;
+    transform: translateX(50%);
+  }
+
+  .input {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    height: 3px;
+    pointer-events: none;
+    background-color: var(--text-color);
+    outline: none;
+    appearance: none;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-slider-thumb {
+      position: relative;
+      z-index: var(--z-index-initial);
+      width: 13px;
+      height: 13px;
+      pointer-events: all;
+      cursor: pointer;
+      background-color: var(--text-color);
+      border: 2px solid var(--block-bg-color);
+      border-radius: 50%;
+      appearance: none;
+    }
+  }
+}

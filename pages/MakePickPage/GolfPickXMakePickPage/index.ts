@@ -1,0 +1,1 @@
+export { GolfPickXMakePickPage } from './GolfPickXMakePickPage'

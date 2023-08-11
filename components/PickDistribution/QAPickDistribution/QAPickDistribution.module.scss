@@ -1,0 +1,107 @@
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+
+  .question-block {
+    padding: 20px;
+    background-color: var(--block-bg-color);
+    border-bottom-left-radius: 8px;
+
+    .index {
+      padding-bottom: 20px;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 29px;
+    }
+  }
+
+  .answers-block {
+    border-bottom-right-radius: 8px;
+
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 5px;
+      margin-bottom: 5px;
+
+      & > p {
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+        padding: 6px 11px;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 148.52%;
+        color: var(--stroke-color);
+        cursor: pointer;
+        user-select: none;
+        background-color: var(--block-bg-color);
+        transition: color var(--transition-duration);
+
+        path {
+          fill: var(--stroke-color);
+          transition: color var(--transition-duration);
+        }
+
+        &:hover:not(.disabled) path {
+          fill: var(--text-color-3);
+        }
+
+        &:hover:not(.disabled) {
+          color: var(--text-color-3);
+        }
+
+        &:last-child {
+          justify-content: end;
+        }
+
+        &.disabled {
+          cursor: not-allowed;
+          opacity: .5;
+        }
+      }
+    }
+
+    .answers {
+      height: calc(100% - 35px);
+      padding: 30px 20px;
+      background-color: var(--block-bg-color);
+
+      .answer {
+        display: grid;
+        grid-template-columns: 3fr 9fr;
+        column-gap: 20px;
+        align-items: center;
+        min-height: 30px;
+      }
+
+      .answer + .answer {
+        margin-top: 30px;
+      }
+
+      .scale {
+        position: relative;
+        height: 30px;
+        border-radius: 15px;
+
+        .pick-count {
+          position: absolute;
+          top: calc(50% - 9px);
+          font-family: var(--russo-one);
+          font-size: 14px;
+          line-height: 148.52%;
+          color: var(--text-color-2);
+        }
+      }
+    }
+  }
+}
+
+.not-found {
+  padding: 27px 30px;
+  background-color: var(--block-bg-color);
+}

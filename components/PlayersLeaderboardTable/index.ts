@@ -1,0 +1,1 @@
+export { PlayersLeaderboardTable } from './PlayersLeaderboardTable'

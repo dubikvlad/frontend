@@ -1,0 +1,67 @@
+.wrapper {
+  position: relative;
+  width: 849px;
+  padding: 20px 66px 40px 20px;
+
+  .cross {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+
+    path {
+      stroke: var(--text-color);
+      stroke-width: 3px;
+    }
+  }
+
+  .notification-text {
+    position: absolute;
+    right: 10px;
+    bottom: 40px;
+    font-family: var(--russo-one);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 148.52%;
+    text-transform: uppercase;
+    user-select: none;
+    opacity: 0.1;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+
+  .title {
+    font-family: var(--russo-one);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 43px;
+    color: var(--success-color);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .text-wrapper {
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+    margin: 40px auto 50px;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  .buttons-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    max-width: 520px;
+    margin: 0 auto;
+
+    a {
+      display: contents;
+    }
+  }
+}

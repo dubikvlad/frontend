@@ -1,0 +1,146 @@
+.result-wrapper {
+  padding: 22px 22px 40px;
+  background: var(--block-bg-color);
+
+  &:first-child {
+    border-radius: 8px 0 0;
+  }
+
+  &:nth-child(2) {
+    border-radius: 0 8px 0 0;
+  }
+
+  &:nth-last-child(-n + 2):not(:nth-child(even)) {
+    border-radius: 0 0 0 8px;
+  }
+
+  &:nth-last-child(-n + 2):not(:nth-child(odd)) {
+    border-radius: 0 0 8px;
+  }
+
+  &.is-last {
+    border-radius: 0 0 8px;
+  }
+}
+
+.result-data {
+  padding: 14px 4px 0 11px;
+
+  &.nfl {
+    padding-top: 0;
+  }
+}
+
+.time-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-bottom: 14px;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-color);
+  opacity: 0.1;
+}
+
+.time {
+  width: fit-content;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  opacity: 0.4;
+}
+
+.team-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-weight: 600;
+}
+
+.team-name {
+  opacity: 0.7;
+}
+
+.match-results,
+.team-results {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.points {
+  display: grid;
+  grid-template-columns: 30px 30px 30px 70px;
+  gap: 10px;
+  align-items: center;
+  width: fit-content;
+  padding-left: 10px;
+  margin-left: auto;
+  opacity: 0.7;
+
+  div {
+    min-width: 25px;
+  }
+
+  &.nfl {
+    grid-template-columns: 70px;
+  }
+}
+
+.point {
+  &:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.match-results {
+  margin-bottom: 24px;
+  font-size: 16px;
+  font-weight: 600;
+
+  .points {
+    opacity: 1;
+  }
+}
+
+.arrow {
+  width: 9px;
+  height: 14px;
+  margin-left: 5px;
+}
+
+.team-results {
+  align-items: center;
+  min-height: 60px;
+
+  .point {
+    &:last-child {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 29px;
+    }
+  }
+
+  &:last-child {
+    margin-top: 15px;
+  }
+
+  &.winner {
+    .team-name {
+      opacity: 1;
+    }
+
+    .points {
+      opacity: 1;
+    }
+
+    .arrow {
+      path {
+        fill: var(--text-color);
+      }
+    }
+  }
+}

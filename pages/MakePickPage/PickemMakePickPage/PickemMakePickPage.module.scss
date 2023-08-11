@@ -1,0 +1,158 @@
+.text {
+  margin: 15px 0 30px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 262px 1fr;
+  gap: 20px;
+}
+
+.make-pick-team-wrapper {
+  display: grid;
+  gap: 10px;
+  height: fit-content;
+
+  .submit-btn {
+    max-width: 290px;
+    height: 43px;
+    margin: 30px auto;
+
+    &.hide {
+      display: none;
+    }
+
+    &.best-bet-type {
+      margin-top: 0;
+    }
+  }
+}
+
+.tiebreak-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  gap: 20px;
+  align-items: center;
+  padding: 10px 25px;
+  background-color: var(--block-bg-color);
+  border-radius: 9px;
+
+  p {
+    justify-self: end;
+    font-family: var(--inter);
+    font-size: 14px;
+    font-weight: 600;
+
+    span {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--stroke-color);
+    }
+  }
+}
+
+.best-bets-left {
+  margin-top: 10px;
+  text-align: center;
+
+  span {
+    font-weight: 600;
+  }
+}
+
+.title {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.info-wrapper {
+  position: relative;
+
+  &:hover {
+    .instruction {
+      opacity: 1;
+    }
+  }
+
+  svg {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+
+    path {
+      fill: var(--stroke-color);
+    }
+  }
+
+  .instruction {
+    position: absolute;
+    top: 0;
+    left: 28px;
+    z-index: var(--z-index-dropdown);
+    display: grid;
+    gap: 20px;
+    width: 357px;
+    height: auto;
+    padding: 30px;
+    pointer-events: none;
+    background: var(--block-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    opacity: 0;
+    transition: var(--transition-duration) opacity;
+
+    .instruction-text {
+      font-family: var(--russo-one);
+      line-height: 148.52%;
+      color: var(--stroke-color);
+      text-transform: uppercase;
+    }
+
+    p {
+      text-transform: initial;
+
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.first-entry-wrapper {
+  display: grid;
+  gap: 20px;
+  padding: 30px 30px 40px;
+  background: var(--block-bg-color);
+  border-radius: 8px;
+
+  .input-wrapper {
+    position: relative;
+
+    .input {
+      input {
+        padding-right: 210px;
+      }
+    }
+
+    button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 190px;
+      height: 42px;
+      border-radius: 0 8px 8px 0;
+    }
+  }
+}
+
+.no-picked {
+  padding: 30px 20px;
+  background: var(--block-bg-color);
+  border-radius: 8px;
+
+  span {
+    font-weight: 600;
+  }
+}

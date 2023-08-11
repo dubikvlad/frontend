@@ -1,0 +1,1 @@
+export { GolfSquaresMyPicks } from './GolfSquaresMyPicks'

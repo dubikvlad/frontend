@@ -1,0 +1,44 @@
+.selects-container {
+  display: grid;
+  grid-template-columns: 282px 1fr;
+  gap: 25px;
+  width: 60%;
+
+  &.selects-container-edit-mode {
+    grid-template-columns: 282px 175px 1fr;
+  }
+}
+
+.deadline-wrapper {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: flex-end;
+
+  .week-deadline-text {
+    font-family: var(--russo-one);
+    font-size: 14px;
+    color: var(--stroke-color);
+    text-transform: uppercase;
+  }
+
+  .week-deadline-value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 262px;
+    min-height: 40px;
+    padding: 8px;
+    font-family: var(--russo-one);
+    text-align: center;
+    background: var(--block-bg-color);
+    border-radius: 8px;
+  }
+}
+
+.top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}

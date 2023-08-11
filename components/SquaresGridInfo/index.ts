@@ -1,0 +1,1 @@
+export { SquaresGridInfo } from './SquaresGridInfo'

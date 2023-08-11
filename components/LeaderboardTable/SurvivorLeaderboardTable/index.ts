@@ -1,0 +1,1 @@
+export { SurvivorLeaderboardTable } from './SurvivorLeaderboardTable'

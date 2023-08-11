@@ -1,0 +1,1 @@
+export { GolfPickXCustomTable } from './GolfPickXCustomTable'

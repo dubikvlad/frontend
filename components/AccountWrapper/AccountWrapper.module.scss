@@ -1,0 +1,12 @@
+.account-wrapper {
+  display: grid;
+  grid-template-columns: var(--sidebar-size) calc(
+      100% - var(--sidebar-size) - var(--account-gap-size)
+    );
+  gap: var(--account-gap-size);
+  margin: 50px 0 120px;
+
+  &.mobile {
+    display: block;
+  }
+}

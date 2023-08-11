@@ -1,0 +1,1 @@
+export { GolfSquaresGridView } from './GolfSquaresGridView'

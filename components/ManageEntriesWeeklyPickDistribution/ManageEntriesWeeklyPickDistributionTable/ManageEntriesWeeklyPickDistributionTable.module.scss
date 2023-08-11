@@ -1,0 +1,168 @@
+.wrapper {
+  table {
+    width: 100%;
+    border-spacing: 0 5px;
+
+    thead,
+    tbody {
+      background: var(--block-bg-color);
+    }
+
+    th {
+      height: 50px;
+      font-weight: normal;
+
+      &:first-child {
+        width: 270px;
+        padding-left: 20px;
+        text-align: left;
+        border-radius: 8px 0 0;
+      }
+
+      &:last-child {
+        width: 270px;
+        padding-right: 20px;
+        text-align: right;
+        border-radius: 0 8px 0 0;
+      }
+
+      &:nth-child(2),
+      &:nth-child(4) {
+        width: 40px;
+      }
+    }
+
+    .raiting-col {
+      padding: 0 3px;
+
+      .centerd {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    th,
+    td {
+      &:nth-child(2) {
+        text-align: center;
+      }
+
+      &:nth-child(4) {
+        text-align: center;
+      }
+    }
+
+    .right-data,
+    .left-data {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      padding: 9px 0;
+    }
+
+    .right-data {
+      justify-content: flex-end;
+      padding-right: 15px;
+
+      .name-short {
+        text-align: right;
+      }
+    }
+
+    .left-data {
+      padding-left: 15px;
+    }
+
+    tr:last-child {
+      td {
+        &:first-child {
+          border-radius: 0 0 0 8px;
+        }
+
+        &:last-child {
+          border-radius: 0 0 8px;
+        }
+      }
+    }
+  }
+}
+
+.team-names {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  .name-short {
+    height: 22px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+
+  .name-full {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.raiting-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 15px;
+
+  &.r100 {
+    background: var(--rt-100);
+  }
+
+  &.r90 {
+    background: var(--rt-90);
+  }
+
+  &.r80 {
+    background: var(--rt-80);
+  }
+
+  &.r70 {
+    background: var(--rt-70);
+  }
+
+  &.r60 {
+    background: var(--rt-60);
+  }
+
+  &.r50 {
+    background: var(--rt-50);
+  }
+
+  &.r40 {
+    background: var(--rt-40);
+  }
+
+  &.r30 {
+    background: var(--rt-30);
+  }
+
+  &.r20 {
+    background: var(--rt-20);
+  }
+
+  &.r10 {
+    background: var(--rt-10);
+  }
+
+  &.r0 {
+    background: var(--rt-0);
+  }
+
+  span {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 12px;
+  }
+}

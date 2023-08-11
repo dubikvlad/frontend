@@ -1,0 +1,166 @@
+.container {
+    padding: 20px 30px;
+    background-color: #fff;
+}
+
+.entries-table {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    .thead {
+        border-radius: 8px 8px 0 0;
+    }
+
+    .row {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+
+        .weeks-container {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            width: 100%;
+            padding: 0 10px;
+        }
+
+        .week-select {
+            display: flex;
+            align-items: center;
+
+          
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    svg {
+        path {
+            color: #000;
+            fill: #000;
+        }
+
+        .active {
+            fill: #000;
+        }
+    }
+
+    .select-wrapper {
+        width: 100%;
+    }
+
+    .name {
+        margin-left: 20px;
+    }
+
+    .nickname {
+        display: flex;
+        align-items: center;
+
+        svg {
+            height: 13px;
+            cursor: pointer;
+
+            path {
+                fill: var(--stroke-color);
+            }
+
+            &:hover {
+                path {
+                    fill: var(--text-color);
+                }
+            }
+        }
+    }
+
+    .picked-teams {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 10px;
+        width: 100%;
+        padding:0 3px;
+        margin-left: 3px;
+    }
+
+    .full-name {
+        margin-top: 5px;
+        font-size: 12px;
+    }
+}
+
+.week-number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+
+    div:last-child {
+        color: var(--text-color-3);
+    }
+
+    &:hover {
+        div:last-child {
+            text-decoration: underline;
+        }
+    }
+}
+
+.team {
+    display: flex;
+    flex: 1 0;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 5px;
+    font-size: 16px;
+    background-color: var(--body-bg-color);
+    border-radius: 3px;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+    }
+}
+
+.entry {
+    padding: 11px 20px;
+    
+    &:nth-child(odd) {
+        background-color: var(--bg-color-3);
+    }
+}
+
+.initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 23px;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 15px;
+    color: var(--text-color-2);
+    background-color: var(--win-color-2);
+    border-radius: 3px;
+}
+
+
+.new-entry {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    & > div {
+        width: 15%;
+    }
+
+    div + div {
+        margin-top: 10px;
+    }
+}

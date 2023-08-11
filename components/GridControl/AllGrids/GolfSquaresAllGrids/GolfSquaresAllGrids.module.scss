@@ -1,0 +1,116 @@
+.container {
+  display: block;
+  margin-top: 20px;
+}
+
+.table {
+  display: grid;
+  gap: 10px;
+}
+
+.row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 22% 25% 24% repeat(2, 1fr);
+  gap: 20px;
+  align-items: center;
+
+  .link {
+    position: absolute;
+    inset: 0;
+  }
+
+  .add-data {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    display: flex;
+    gap: 3px;
+
+    .grid-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 15px;
+      margin-right: 10px;
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 76px;
+      height: 15px;
+      font-size: 8px;
+      font-weight: 700;
+      color: var(--text-color-2);
+      background: var(--bg-color-8);
+      border-radius: 3px;
+
+      &.secondary {
+        background: var(--stroke-color);
+      }
+    }
+  }
+}
+
+.head {
+  padding: 30px 20px 30px 30px;
+  background: var(--block-bg-color);
+  border-radius: 8px 8px 0 0;
+
+  .row {
+    font-size: 14px;
+    color: var(--stroke-color);
+  }
+}
+
+.date {
+  white-space: nowrap;
+}
+
+.body {
+  padding: 0 10px;
+  background: var(--block-bg-color);
+
+  .row {
+    min-height: 100px;
+    padding: 12px 10px 12px 20px;
+    cursor: pointer;
+
+    &:nth-child(odd) {
+      background: var(--bg-color-3);
+
+      &:hover {
+        background: var(--bg-color-11-op-04);
+      }
+    }
+
+    &:nth-child(even) {
+      &:hover {
+        background: var(--bg-color-11-op-02);
+      }
+    }
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--block-bg-color);
+  border: 1px solid var(--block-bg-color);
+  border-radius: 0 0 8px 8px;
+  transition: all var(--transition-duration);
+
+  &:hover {
+    color: var(--button-light-hover-color);
+    border-color: var(--button-light-hover-color);
+  }
+}

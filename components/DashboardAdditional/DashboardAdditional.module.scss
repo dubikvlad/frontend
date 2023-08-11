@@ -1,0 +1,391 @@
+.add {
+  display: grid;
+  grid-template-areas:
+    'status pools-start'
+    'status join';
+  grid-template-columns: 385px 1fr;
+  grid-auto-flow: row;
+  gap: 20px 24px;
+  align-items: stretch;
+
+  @include adaptive.xl {
+    grid-template-areas:
+      'status pools-start'
+      'join join';
+    gap: 20px;
+  }
+
+  @include adaptive.lg {
+    grid-template-columns: 36.5% 1fr;
+  }
+
+  @include adaptive.sm {
+    grid-template-areas:
+      'status'
+      'pools-start'
+      'join';
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  grid-area: status;
+  height: 100%;
+  padding: 20px 30px;
+  background: var(--block-bg-color);
+  border-radius: 8px;
+
+  @include adaptive.lg {
+    padding: 20px 20px 44px;
+  }
+
+  @include adaptive.lg {
+    padding-bottom: 30px;
+  }
+
+  .balance {
+    display: flex;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 77px;
+
+    @include adaptive.md {
+      font-size: 32px;
+      line-height: 39px;
+    }
+  }
+
+  .balance-info {
+    margin-top: 5px;
+    color: var(--stroke-color);
+
+    @include adaptive.md {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    margin: 30px 0;
+    background-color: var(--bg-color-9-op-03);
+    border-radius: 8px;
+
+    @include adaptive.md {
+      margin-top: 20px;
+    }
+  }
+
+  .replenish-btn {
+    max-width: 190px;
+    height: 40px;
+    margin: auto auto 20px;
+  }
+
+  .info-row {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 5px;
+
+    .info-text {
+      font-size: 16px;
+
+      @include adaptive.md {
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+
+    .info-dots {
+      overflow: hidden;
+      font-size: 16px;
+      color: var(--stroke-color);
+      white-space: nowrap;
+    }
+
+    .info-number {
+      font-weight: 600;
+
+      @include adaptive.md {
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+  }
+}
+
+.title {
+  font-family: var(--russo-one);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  text-transform: uppercase;
+
+  @include adaptive.sm {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.pools-start {
+  display: flex;
+  flex-direction: column;
+  grid-area: pools-start;
+  gap: 20px;
+  padding: 30px;
+  background-color: var(--block-bg-color);
+  border-radius: 8px;
+
+  @include adaptive.md {
+    padding: 20px;
+  }
+
+  .start-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 8px;
+
+    @include adaptive.md {
+      gap: 10px;
+      justify-content: space-evenly;
+    }
+
+    @include adaptive.sm {
+      gap: 20px 10px;
+    }
+  }
+
+  .start-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 107px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: var(--transition-duration) border-color;
+
+    &:hover {
+      cursor: pointer;
+      border: 1px solid var(--border-color-4);
+    }
+
+    @include adaptive.md {
+      width: 80px;
+      height: 85px;
+    }
+
+    @include adaptive.sm {
+      width: 70px;
+      height: 97px;
+    }
+
+    .start-item-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--stroke-color);
+      text-align: center;
+
+      @include adaptive.md {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .start-img,
+  .custom-icon {
+    width: 60px;
+    height: 60px;
+
+    @include adaptive.md {
+      width: 40px;
+      height: 40px;
+    }
+
+    @include adaptive.sm {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .custom-icon {
+    path {
+      fill: var(--stroke-color);
+    }
+  }
+}
+
+.join-wrapper {
+  grid-area: join;
+  padding: 30px 30px 40px;
+  background: var(--block-bg-color);
+  border-radius: 8px;
+
+  @include adaptive.lg {
+    padding: 30px;
+  }
+
+  @include adaptive.md {
+    padding: 30px 20px;
+  }
+
+  @include adaptive.sm {
+    padding: 20px;
+  }
+}
+
+.join-info {
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--stroke-color);
+}
+
+.input-wrapper {
+  position: relative;
+  margin-top: 30px;
+
+  input {
+    padding-right: 230px !important;
+  }
+
+  .button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    font-family: var(--russo-one);
+    font-size: 16px;
+    font-weight: 400;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    @include adaptive.sm {
+      position: unset;
+      width: 100%;
+      height: 60px;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+  }
+}
+
+.status-md {
+  display: grid;
+  grid-template-columns: 1fr 108px;
+  column-gap: 5px;
+
+  > div {
+    padding: 15px 20px;
+    background-color: var(--block-bg-color);
+  }
+
+  .balance-md {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    border-radius: 8px 0 0 8px;
+  }
+
+  .balance-info-md {
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--stroke-color);
+  }
+
+  .replenish {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    color: var(--button-blue-color);
+    border-radius: 0 8px 8px 0;
+  }
+}
+
+.mark {
+  position: relative;
+  padding-top: 3px;
+
+  span {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 31px;
+    cursor: pointer;
+
+    @include adaptive.custom(668px) {
+      position: absolute;
+      top: -30px;
+      left: 70px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &:hover {
+      & + .bonus-balance-text {
+        opacity: 1;
+      }
+    }
+  }
+
+  .bonus-balance-text {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    width: 250px;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    pointer-events: none;
+    background: var(--block-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgb(46 46 46 / 8%);
+    opacity: 0;
+    transition: var(--transition-duration) opacity;
+
+    @include adaptive.lg {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.start-pool-sm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--block-bg-color);
+  border-radius: 8px;
+
+  p {
+    font-family: var(--russo-one), sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+
+  svg {
+    color: var(--text-color-3);
+  }
+}

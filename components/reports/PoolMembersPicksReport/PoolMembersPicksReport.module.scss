@@ -1,0 +1,161 @@
+.wrapper {
+  display: grid;
+  gap: 10px;
+  align-content: flex-start;
+}
+
+.entries-wrapper {
+  display: grid;
+  gap: 10px;
+}
+
+.entry-item {
+  .entry-name-wrapper {
+    padding: 16px 30px;
+    background-color: var(--text-color-3);
+    border-radius: 8px 8px 0 0;
+
+    p {
+      font-family: var(--russo-one);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 148.52%;
+      color: var(--text-color-2);
+    }
+  }
+
+  .entry-item-body {
+    position: relative;
+    display: grid;
+    grid-template-columns: 155px 1fr;
+    padding: 20px 20px 40px 30px;
+    overflow: hidden;
+    background-color: var(--block-bg-color);
+    border-radius: 0 0 8px 8px;
+
+    .line {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: var(--text-color-3);
+    }
+  }
+
+  .points-wrapper {
+    padding-top: 8px;
+
+    .points-value {
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 44px;
+    }
+
+    .points-text {
+      font-size: 12px;
+      line-height: 15px;
+      color: var(--stroke-color);
+    }
+
+    .stages-list {
+      display: grid;
+      gap: 19px;
+      margin-top: 27px;
+
+      li {
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+  }
+
+  .forecasts-wrapper {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    gap: 5px;
+
+    .forecast-item {
+      display: grid;
+      gap: 5px;
+
+      &:first-child {
+        .forecast-item-head {
+          border-radius: 3px 0 0;
+        }
+      }
+
+      &:last-child {
+        .forecast-item-head {
+          border-radius: 0 3px 0 0;
+        }
+      }
+
+      .forecast-item-head {
+        display: grid;
+        gap: 17px;
+        justify-items: center;
+        height: fit-content;
+        padding: 20px 5px 7px;
+        background-color: var(--body-bg-color);
+
+        .image-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 55px;
+          height: 55px;
+
+          .question {
+            font-family: var(--russo-one);
+            font-size: 36px;
+            line-height: 43px;
+            color: var(--stroke-color-3);
+          }
+        }
+
+        .assign-points-value {
+          &.assign-points-value-not-forecast {
+            color: var(--stroke-color);
+          }
+        }
+
+        p {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 19px;
+        }
+      }
+
+      .stage-value {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        background-color: #eef7f1;
+
+        &:nth-child(odd) {
+          background-color: #ddeee2;
+        }
+
+        &:last-child {
+          font-weight: 600;
+          background-color: #abd5b7;
+        }
+      }
+    }
+  }
+}
+
+.no-entries {
+  padding: 20px 30px;
+  background-color: var(--block-bg-color);
+  border-radius: 8px;
+
+  span {
+    font-weight: 600;
+    word-break: break-all;
+  }
+}

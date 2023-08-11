@@ -1,0 +1,1 @@
+export { DefaultSwiper } from './DefaultSwiper'

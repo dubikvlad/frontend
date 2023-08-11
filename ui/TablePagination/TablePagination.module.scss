@@ -1,0 +1,49 @@
+.container {
+  width: 265px;
+  margin: 0 auto;
+}
+
+.buttons-wrap {
+  display: flex;
+  column-gap: 5px;
+  align-items: center;
+  justify-content: space-between;
+
+  .btn {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    font-family: var(--russo-one), sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 3px;
+  }
+
+  path {
+    fill: var(--bg-color-8);
+  }
+
+  .disabled {
+    pointer-events: none;
+
+    path {
+      fill: var(--stroke-color);
+    }
+  }
+
+  .current {
+    border-color: var(--bg-color-8);
+  }
+
+  .ellipsis {
+    width: 25px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  height: 85px;
+  padding: 0 20px;
+  background: var(--block-bg-color);
+  border-radius: 8px;
+}

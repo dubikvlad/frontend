@@ -1,0 +1,1 @@
+export { SquaresSeriesGameSettings } from './SquaresSeriesGameSettings'

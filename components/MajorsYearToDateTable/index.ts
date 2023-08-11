@@ -1,0 +1,1 @@
+export { MajorsYearToDateTable } from './MajorsYearToDateTable'

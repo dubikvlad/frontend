@@ -1,0 +1,1 @@
+export { GolfSquaresMatchInfoAndGridSettings } from './GolfSquaresMatchInfoAndGridSettings'

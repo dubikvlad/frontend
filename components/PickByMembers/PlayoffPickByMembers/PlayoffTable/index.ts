@@ -1,0 +1,1 @@
+export { PlayoffTable } from './PlayoffTable'

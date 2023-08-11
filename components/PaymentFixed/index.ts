@@ -1,0 +1,1 @@
+export { PaymentFixed } from './PaymentFixed'

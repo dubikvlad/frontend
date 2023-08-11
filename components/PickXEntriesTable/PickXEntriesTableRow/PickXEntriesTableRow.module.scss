@@ -1,0 +1,161 @@
+.row {
+  display: grid;
+  grid-template-columns: 255px 1fr 281px;
+  align-items: center;
+  padding: 15px 15px 15px 20px;
+  background: var(--block-bg-color);
+
+  &:first-child {
+    border-radius: 8px 8px 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+.entry-name {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: fit-content;
+}
+
+.cards {
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+
+  &.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 110px);
+    gap: 20px 10px;
+  }
+
+  &.no-link {
+    pointer-events: none;
+  }
+}
+
+.card {
+  position: relative;
+  display: grid;
+  gap: 7px;
+  justify-content: center;
+  width: 110px;
+}
+
+.player-name {
+  font-size: 12px;
+  text-align: center;
+}
+
+.world-rank {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.sttings-button-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.settings-menu {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  z-index: var(--z-index-dropdown);
+  width: fit-content;
+  min-width: 167px;
+  height: auto;
+  padding: 10px 0;
+  pointer-events: none;
+  visibility: hidden;
+  user-select: none;
+  background: var(--block-bg-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  opacity: 0;
+
+  &.visible {
+    pointer-events: initial;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.dots {
+  position: relative;
+  display: flex;
+  height: 100%;
+  padding: 25px 20px 25px 15px;
+
+  .line {
+    width: 1px;
+    height: 100%;
+    margin: -5px 0;
+    margin-right: 20px;
+    background: var(--border-color);
+  }
+
+  .info-wrapper {
+    display: grid;
+    gap: 15px;
+    height: fit-content;
+  }
+
+  .info {
+    display: grid;
+    grid-template-columns: 95px auto;
+    gap: 10px;
+    height: fit-content;
+
+    .info-points {
+      font-weight: 600;
+    }
+  }
+
+  .dots-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 5px 5px;
+    cursor: pointer;
+    user-select: none;
+
+    circle {
+      fill: var(--stroke-color);
+    }
+  }
+}
+
+.wrapper-container {
+  right: 20px;
+}
+
+.entry-name-value {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: fit-content;
+
+  .entry-rename-input {
+    max-width: 207px;
+    padding-bottom: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: unset;
+    border-bottom: 1px solid var(--stroke-color);
+  }
+
+  p {
+    max-width: 207px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+  }
+}

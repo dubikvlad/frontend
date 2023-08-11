@@ -1,0 +1,21 @@
+.schedule {
+  display: grid;
+  gap: 20px;
+}
+
+.team-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.no-data {
+  padding: 30px;
+  word-break: break-all;
+  background-color: var(--block-bg-color);
+  border-radius: 8px;
+
+  span {
+    font-weight: 600;
+  }
+}

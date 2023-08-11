@@ -1,0 +1,90 @@
+@mixin grid {
+  display: grid;
+  grid-template-columns: 10% 47% repeat(3, 1fr);
+  align-items: center;
+}
+
+.container {
+  padding: 20px 10px 40px;
+  background-color: var(--block-bg-color);
+  border-radius: 8px;
+
+  &.another-indent {
+    padding: 20px 30px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-family: var(--inter), sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .pedestal {
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    column-gap: 24px;
+    justify-content: center;
+    margin-bottom: 24px;
+
+    .player {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      row-gap: 5px;
+      align-items: center;
+
+      p {
+        font-size: 14px;
+        line-height: 17px;
+      }
+
+      .position {
+        position: absolute;
+        right: -8px;
+      }
+    }
+  }
+
+  .table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+
+    .t-head {
+      @include grid;
+
+      > div {
+        padding: 10px;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 15px;
+        text-align: left;
+      }
+    }
+
+    .t-body {
+      .row {
+        @include grid;
+
+        > div {
+          padding: 6px 10px 9px;
+          font-size: 14px;
+          line-height: 17px;
+          white-space: nowrap;
+
+          &:nth-child(1) {
+            width: 50px;
+          }
+        }
+
+        &:nth-child(odd) {
+          background-color: rgb(87 171 111 / 10%);
+        }
+      }
+    }
+  }
+}

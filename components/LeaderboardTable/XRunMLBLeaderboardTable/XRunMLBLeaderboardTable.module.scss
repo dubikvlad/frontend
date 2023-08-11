@@ -1,0 +1,84 @@
+.container {
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  .wrapper {
+    display: grid;
+    gap: 10px;
+    min-width: 1180px;
+  }
+}
+
+.not-found {
+  padding: 27px 30px;
+  background-color: var(--block-bg-color);
+}
+
+.star-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .star {
+    path {
+      stroke: var(--favorites-color);
+    }
+  }
+}
+
+.grid {
+  grid-template-columns: 4.5% 17% 9% 56% repeat(2, 1fr);
+}
+
+.runs-wrap {
+  display: flex;
+  column-gap: 2px;
+  height: 100%;
+
+  > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+
+    &.win {
+      background-color: #f2ee96;
+    }
+  }
+}
+
+.item-name-wrap {
+  height: 23px;
+
+  .item-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 23px;
+    margin: 0 2px;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: var(--text-color-2);
+    border-radius: 3px;
+  }
+}
+
+.cell-center {
+  text-align: center;
+}
+
+.team-info {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  column-gap: 12px;
+  align-items: center;
+  padding: 5px 8px 5px 5px;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+
+  & p {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,1 @@
+export { SquaresMakePickMainComponent } from './SquaresMakePickMainComponent'

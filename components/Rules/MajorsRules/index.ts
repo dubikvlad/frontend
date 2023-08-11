@@ -1,0 +1,1 @@
+export { MajorsRules } from './MajorsRules'

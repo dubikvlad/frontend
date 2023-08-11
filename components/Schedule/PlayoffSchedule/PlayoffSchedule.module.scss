@@ -1,0 +1,82 @@
+.event {
+  &:first-child {
+    .games {
+      .game {
+        &:first-child {
+          border-radius: 8px 8px 0 0;
+        }
+      }
+    }
+  }
+
+  &:last-child {
+    .games {
+      .game {
+        &:last-child {
+          border-radius: 0 0 8px 8px;
+        }
+      }
+    }
+  }
+
+  .event-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+}
+
+.event-info-text {
+  font-family: var(--russo-one);
+  font-size: 14px;
+  text-transform: uppercase;
+  opacity: 0.4;
+}
+
+.games {
+  display: grid;
+  gap: 3px;
+}
+
+.game {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding: 10px 30px 10px 50px;
+  background-color: var(--block-bg-color);
+
+  .participants {
+    display: grid;
+    flex: 1;
+    grid-template-columns: 1fr 120px 1fr;
+    gap: 30px;
+    align-items: center;
+
+    .participant {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      justify-content: flex-end;
+
+      &.reverse {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  .separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: 400;
+    opacity: 0.7;
+  }
+}
+
+.no-data {
+  padding: 30px;
+  margin-top: 10px;
+  background: var(--block-bg-color);
+  border-radius: 8px;
+}

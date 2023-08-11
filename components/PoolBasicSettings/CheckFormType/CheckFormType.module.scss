@@ -1,0 +1,291 @@
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  div {
+    flex-grow: 1;
+  }
+}
+
+.checkbox-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.custom {
+  display: flex;
+  gap: 40px;
+
+  &.column {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &.grid {
+    display: grid;
+    gap: 30px;
+  }
+
+  .custom-field {
+    flex-grow: 1;
+  }
+}
+
+.slider-wrapper {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+
+  .slider-title-wrapper {
+    display: flex;
+    gap: 20px;
+
+    &.disabled {
+      padding-bottom: 41px;
+    }
+  }
+
+  .slider-title {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .slider-selector {
+    flex-grow: 1;
+    width: 320px;
+  }
+
+  .slider-comment {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+}
+
+.info-wrapper {
+  position: absolute;
+  right: 18px;
+  z-index: var(--z-index-initial);
+}
+
+.alert {
+  margin-top: 20px;
+
+  p {
+    margin-top: 10px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.read-only-wrapper {
+  position: relative;
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+
+  input {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    padding-top: 29px;
+    padding-bottom: 12px;
+    color: var(--stroke-color);
+    text-align: left;
+    background: var(--border-color);
+    border-radius: 8px;
+  }
+
+  .label-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    pointer-events: none;
+
+    .label {
+      font-size: 10px;
+      line-height: 12px;
+      color: var(--stroke-color);
+      transform: translate(0, -10px);
+    }
+  }
+}
+
+.public-or-private-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 60px;
+  user-select: none;
+
+  & > div {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    cursor: pointer;
+    background: var(--block-bg-color);
+    border: 1px solid var(--stroke-color);
+    transition: var(--transition-duration) background-color,
+      var(--transition-duration) border-color;
+
+    svg {
+      path {
+        fill: var(--text-color);
+      }
+    }
+
+    &:first-child {
+      border-radius: 8px 0 0 8px;
+    }
+
+    &:last-child {
+      border-radius: 0 8px 8px 0;
+    }
+
+    &.active {
+      color: var(--text-color-2);
+      background: var(--text-color-3);
+      border-color: var(--text-color-3);
+
+      svg {
+        path {
+          fill: var(--block-bg-color);
+        }
+      }
+    }
+  }
+}
+
+.list-buttons-wrapper {
+  display: flex;
+  gap: 70px;
+}
+
+.list-name {
+  display: flex;
+  gap: 20px;
+  height: fit-content;
+
+  > span {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+}
+
+.list-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.list-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 37px;
+  font-size: 14px;
+  border: 1px solid var(--stroke-color);
+  border-radius: 3px;
+
+  input {
+    display: none;
+  }
+
+  &:not(.disabled) {
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--text-color);
+    }
+  }
+
+  &.active {
+    color: var(--text-color-2);
+    background-color: var(--border-color-4);
+    border-color: var(--border-color-4);
+  }
+
+  &.disbled {
+    color: red;
+    color: var(--stroke-color);
+    pointer-events: none;
+    cursor: default;
+    background: var(--border-color);
+    border-color: var(--border-color);
+  }
+}
+
+.switcher-wrapper {
+  display: flex;
+  gap: 30px;
+
+  .swtcher-container-wrapper {
+    display: grid;
+    align-items: center;
+    height: 100%;
+  }
+
+  .switcher-container {
+    display: flex;
+    gap: 30px;
+  }
+
+  .switcher-subtitle {
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+
+.mulligans-row {
+  width: 100%;
+  height: 1px;
+  background: var(--border-color);
+}
+
+.input-gruop-title {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 20px;
+}
+
+.container-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+}
+
+.checkboxes-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-top: 30px;
+
+  .checkboxes {
+    display: grid;
+    gap: 15px;
+  }
+}
+
+.datetime-local {
+  display: grid;
+  grid-template-columns: 10% 1fr;
+  gap: 40px;
+  align-items: center;
+}

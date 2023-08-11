@@ -1,0 +1,22 @@
+.wrapper {
+  h1 {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    margin-bottom: 15px;
+
+    svg {
+      width: 25px;
+      height: auto;
+      cursor: pointer;
+
+      path {
+        fill: var(--stroke-color);
+      }
+    }
+  }
+
+  .description-text {
+    margin-bottom: 50px;
+  }
+}

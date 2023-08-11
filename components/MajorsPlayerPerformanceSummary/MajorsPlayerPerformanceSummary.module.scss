@@ -1,0 +1,18 @@
+.grid {
+  grid-template-columns: 1fr 2fr repeat(8, 1fr);
+}
+
+.points {
+  font-weight: 600;
+  color: var(--success-color);
+
+  &.minus {
+    color: var(--error-color)
+  }
+}
+
+.wrap {
+  margin-bottom: 20px;
+}
+
+

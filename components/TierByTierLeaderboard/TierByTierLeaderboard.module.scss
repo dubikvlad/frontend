@@ -1,0 +1,163 @@
+.wrapper {
+  display: grid;
+  gap: 30px;
+}
+
+.tournament-and-photos-players-wrapper {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 20px;
+}
+
+.photos-of-players-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-self: flex-end;
+}
+
+.tournament-name-option-date {
+  color: var(--stroke-color);
+
+  &.tournament-name-option-date-current {
+    color: var(--text-color-3);
+  }
+}
+
+.tiers-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.tier-wrapper {
+  display: grid;
+  gap: 5px;
+  align-content: flex-start;
+}
+
+.tier-header {
+  padding: 16px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  background-color: var(--block-bg-color);
+  border-radius: 8px 8px 0 0;
+}
+
+.tier-list {
+  display: grid;
+  gap: 1px;
+  max-height: 399px;
+  overflow-y: auto;
+
+  @include mixins.scroll;
+
+  &.tier-list-with-photos {
+    max-height: 739px;
+  }
+}
+
+.tier-list-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 32px 1fr 50px;
+  gap: 5px;
+  align-items: center;
+  min-height: 39px;
+  padding: 10px 20px;
+  background-color: var(--block-bg-color);
+
+  &.tier-list-item-not-active {
+    & > *:not(.cross) {
+      opacity: 0.5;
+    }
+  }
+
+  &.tier-list-item-with-photos {
+    grid-template-columns: 45px 32px 1fr 50px;
+    min-height: 73px;
+
+    .image-wrapper {
+      width: 40px;
+      height: 53px;
+      overflow: hidden;
+
+      svg {
+        width: inherit;
+        height: inherit;
+      }
+    }
+  }
+
+  &:last-child:not(.tier-list-item-with-pagination) {
+    border-radius: 0 0 8px 8px;
+  }
+
+  .tier-list-item-world-rank-text {
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--stroke-color);
+  }
+
+  .points {
+    justify-self: flex-end;
+    font-weight: 600;
+
+    &.points-minus {
+      color: var(--error-color);
+    }
+
+    &.points-zero {
+      color: var(--success-color);
+    }
+
+    &.points-plus {
+      color: var(--text-color);
+    }
+  }
+
+  .cross {
+    position: absolute;
+    top: 11px;
+    left: 10px;
+  }
+}
+
+.no-info {
+  padding: 30px 20px;
+  background-color: var(--block-bg-color);
+  border-radius: 8px;
+
+  span {
+    font-weight: 600;
+  }
+}
+
+.pagination-wrapper {
+  display: grid;
+  grid-template-columns: 7px 1fr 7px;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--block-bg-color);
+  border-radius: 0 0 8px 8px;
+
+  .arrow {
+    cursor: pointer;
+    user-select: none;
+    transition: var(--transition-duration) opacity;
+
+    path {
+      fill: var(--text-color);
+    }
+
+    &.arrow-hide {
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+
+  p {
+    justify-self: center;
+  }
+}

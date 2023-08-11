@@ -1,0 +1,115 @@
+.wrapper {
+  padding: 20px 40px 40px;
+  background-color: var(--block-bg-color);
+  border-radius: 8px;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.filter-wrapper {
+  max-width: 340px;
+  padding: 20px 0 36px;
+}
+
+.team-wrapper {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.chart-wrapper {
+  display: grid;
+  gap: 20px;
+
+  .eliminations-wrapper {
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    align-items: center;
+
+    .eliminations-list-wrapper {
+      display: flex;
+      width: 100%;
+
+      .zero {
+        font-size: 12px;
+        opacity: 0.3;
+      }
+    }
+
+    .eliminations-list {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      width: 100%;
+
+      li {
+        justify-self: end;
+        font-size: 12px;
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .teams-wrapper {
+    display: grid;
+    gap: 10px;
+    align-items: center;
+
+    .diagram-wrapper {
+      display: grid;
+      grid-template-columns: 270px 1fr;
+      align-items: center;
+
+      .team-wrapper {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        gap: 20px;
+        align-items: center;
+        height: 50px;
+      }
+
+      .bar-wrapper {
+        display: flex;
+        align-items: center;
+
+        .bar {
+          position: relative;
+          width: 0%;
+          height: 10px;
+          cursor: pointer;
+          background: linear-gradient(
+            270deg,
+            var(--text-color-3) 0%,
+            #8cc8ff 100%
+          );
+          border-radius: 0 10px 10px 0;
+          transition: var(--transition-duration-long) width linear;
+
+          .count-eliminations {
+            position: absolute;
+            top: -21px;
+            right: 1px;
+            font-size: 14px;
+            white-space: nowrap;
+            pointer-events: none;
+            opacity: 0;
+            transition: var(--transition-duration) opacity;
+
+            &.count-more {
+              top: -5px;
+              right: unset;
+            }
+          }
+
+          &:hover {
+            .count-eliminations {
+              opacity: 0.3;
+            }
+          }
+        }
+      }
+    }
+  }
+}

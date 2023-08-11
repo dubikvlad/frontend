@@ -1,0 +1,1 @@
+export { GolfMajorsPickedRosterTiered } from './GolfMajorsPickedRosterTiered'

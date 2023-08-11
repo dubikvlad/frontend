@@ -1,0 +1,1 @@
+export { GolfPickXRules } from './GolfPickXRules'

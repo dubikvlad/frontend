@@ -1,0 +1,74 @@
+.description-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 15px;
+
+  @include adaptive.xl {
+    grid-template-columns: 1fr;
+  }
+
+  .title-wrapper {
+    p {
+      width: 100%;
+      max-width: 545px;
+      margin-top: 50px;
+      line-height: 148.52%;
+
+      @include adaptive.xl {
+        max-width: 100%;
+        margin-top: 20px;
+      }
+
+      @include adaptive.sm {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    .card {
+      position: relative;
+      display: grid;
+      gap: 15px;
+      width: 221px;
+      height: 298px;
+      padding: 15px 15px 40px;
+      background: var(--block-bg-color);
+      border-radius: 6px;
+      opacity: 0.6;
+
+      @include adaptive.xl {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      &.active-step {
+        opacity: 1;
+      }
+
+      .title {
+        font-family: var(--russo-one);
+        font-size: 14px;
+        color: var(--stroke-color);
+        text-transform: uppercase;
+      }
+
+      svg {
+        width: 100%;
+        max-width: 192px;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      .text {
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+      }
+    }
+  }
+}

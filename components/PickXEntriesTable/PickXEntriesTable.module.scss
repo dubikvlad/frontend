@@ -1,0 +1,53 @@
+.wrapper {
+  display: grid;
+  gap: 5px;
+}
+
+.nodata {
+  padding: 35px 30px;
+  background: var(--block-bg-color);
+  border-radius: 8px;
+}
+
+.card {
+  position: relative;
+  display: grid;
+  gap: 7px;
+  justify-content: center;
+  width: 110px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+}
+
+.lower {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 255px 1fr 281px;
+  align-items: center;
+  padding: 15px 15px 15px 20px;
+  background: var(--block-bg-color);
+
+  &:first-child {
+    border-radius: 8px 8px 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+.entry-name {
+  display: flex;
+  gap: 20px;
+}
+
+.year {
+  padding-left: 35px;
+}

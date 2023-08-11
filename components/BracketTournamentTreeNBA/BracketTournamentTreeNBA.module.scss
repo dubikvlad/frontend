@@ -1,0 +1,266 @@
+.main {
+  min-height: 584px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+  min-width: 1180px;
+  margin-top: 40px;
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    gap: 41px;
+    justify-content: space-around;
+
+    .match-layout {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      width: 100%;
+      min-width: 135px;
+
+      .match-title {
+        position: absolute;
+        font-size: 12px;
+        font-weight: bold;
+        color: var(--stroke-color);
+        transform: (translateY(-25px));
+      }
+    }
+
+    .match-container {
+      position: relative;
+      display: flex;
+
+      &.left {
+        transform: translateX(-24px);
+      }
+
+      &.right {
+        transform: translateX(24px);
+      }
+
+      .stage-2-match {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+    }
+  }
+}
+
+.team-layout {
+  display: grid;
+  grid-template-columns: 1fr 4.5fr 30px;
+  min-width: 142px;
+  height: 40px;
+  padding: 6px;
+  background-color: var(--block-bg-color);
+
+  &.without-team {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .empty-logo-team {
+      width: 30px;
+      height: 30px;
+      background-color: var(--border-color);
+      border-radius: 3px;
+    }
+  }
+
+  &.top {
+    border-radius: 8px 8px 0 0;
+  }
+
+  &.bottom {
+    border-radius: 0 0 8px 8px;
+  }
+
+  &.lost {
+    opacity: 0.5;
+  }
+
+  &.win-entry {
+    background-color: var(--win-color-3);
+  }
+
+  &.lost-entry {
+    background-color: var(--lost-color-3);
+  }
+
+  .team-seed {
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  .team-name {
+    padding-top: 6px;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--text-color);
+  }
+
+  .logo-team-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.make-pick {
+  .team-layout {
+    cursor: pointer;
+    transition: 0.1s ease;
+
+    &:hover {
+      box-shadow: 0 0 0 1px var(--border-color-4) inset;
+
+      .team-state {
+        color: var(--text-color-3);
+      }
+    }
+
+    &.winner {
+      opacity: 1;
+    }
+
+    &.picked {
+      box-shadow: 0 0 0 1px var(--text-color) inset;
+    }
+
+    &.error {
+      box-shadow: 0 0 0 1px var(--error-color) inset;
+    }
+  }
+}
+
+.champion-container {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  min-width: 230px;
+  padding: 10px 10px 13px;
+  background-color: var(--block-bg-color);
+  border-radius: 8px;
+
+  .label {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 15px;
+  }
+
+  .name {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &.without-winner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .empty-logo {
+      width: 55px;
+      height: 55px;
+      background: var(--border-color);
+      border-radius: 8px;
+    }
+  }
+}
+
+.arrow-container {
+  position: absolute;
+
+  &.stage4 {
+    top: -21px;
+
+    &.left {
+      left: -28px;
+    }
+
+    &.right {
+      right: -28px;
+    }
+  }
+
+  &.stage2 {
+    left: -4px;
+
+    &.top {
+      top: -83px;
+    }
+
+    &.bottom {
+      bottom: -83px;
+    }
+
+    &.right {
+      right: -4px;
+      left: unset;
+
+      &.top {
+        top: -83px;
+      }
+
+      &.bottom {
+        bottom: -83px;
+      }
+    }
+  }
+
+  &.final {
+    &.left {
+      top: calc(50% - 1px);
+      left: -52px;
+    }
+
+    &.right {
+      top: calc(50% - 1px);
+      right: -52px;
+    }
+
+    &.center {
+      bottom: -28px;
+      left: 50%;
+    }
+  }
+}
+
+.result-container {
+  position: absolute;
+  transform: translate(-18%, 112px);
+}
+
+.submit-button {
+  margin-top: 10px;
+}
+
+.tiebreak-form {
+  display: grid;
+  grid-template-columns: 6.5fr 3.5fr;
+  width: 230px;
+  padding: 10px 15px;
+  margin-top: 20px;
+  font-size: 14px;
+  background-color: var(--block-bg-color);
+  border-radius: 8px;
+
+  .text {
+    display: flex;
+    align-items: center;
+  }
+
+  span {
+    font-size: 14px;
+  }
+
+  .input {
+    height: 40px;
+  }
+}

@@ -1,0 +1,1 @@
+export { GolfPickXMyPicks } from './GolfPickXMyPicks'

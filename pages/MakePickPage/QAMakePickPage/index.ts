@@ -1,0 +1,1 @@
+export { QAMakePickPage } from './QAMakePickPage'

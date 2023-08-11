@@ -1,0 +1,133 @@
+.payment-block {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+
+  .submit-payment {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    padding: 22px 30px;
+    background-color: var(--block-bg-color);
+    border-radius: 8px;
+
+    p {
+      font-weight: 600;
+    }
+
+    input {
+      max-width: 102px;
+    }
+  }
+
+  .payment-calc {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      height: 361px;
+      padding: 20px;
+      background: var(--block-bg-color);
+      border-radius: 8px;
+
+      &-title {
+        font-size: 24px;
+        color: var(--text-color-3);
+      }
+
+      &-price-block {
+        flex-grow: 1;
+        margin: 30px 0 74px;
+
+        p {
+          &:first-child {
+            font-size: 64px;
+            font-weight: 600;
+            line-height: 77px;
+          }
+
+          &:last-child {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 22px;
+            color: var(--stroke-color);
+          }
+        }
+      }
+
+      .entries-info-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+
+        .entries-paid-text {
+          font-size: 16px;
+          font-weight: 400;
+          color: var(--stroke-color);
+        }
+
+        .payment-calc-item-entries-count {
+          text-align: end;
+        }
+      }
+
+      &-total-block {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 20px;
+        margin-top: 10px;
+        border-top: 1px solid var(--border-color);
+
+        p {
+          font-size: 18px;
+
+          &:last-child {
+            font-weight: 600;
+          }
+
+          &.upper-unit-limit-text {
+            margin-left: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .total-block {
+    display: grid;
+    grid-template-columns: auto 1fr 200px;
+    gap: 35px;
+    align-items: center;
+    padding: 13px 20px 13px 25px;
+    background-color: var(--block-bg-color);
+    border-radius: 8px;
+
+    .total-text {
+      font-size: 24px;
+    }
+
+    .total-value {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .link-disabled {
+      pointer-events: none;
+    }
+
+    button {
+      height: 60px;
+      font-family: var(--russo-one);
+      font-size: 16px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+}

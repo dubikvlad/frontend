@@ -1,0 +1,21 @@
+.pool-head {
+    h1 + div {
+        margin-top: 15px;
+    }
+
+    margin-bottom: 50px;
+}
+
+
+.select-container {
+    margin-bottom: 30px;
+}
+
+.tournament-name-option-date {
+    color: var(--stroke-color);
+  
+    &-current {
+      color: var(--text-color-3);
+    }
+  }
+  

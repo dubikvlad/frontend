@@ -1,0 +1,114 @@
+.wrapper {
+  --checkbox-size: 14px;
+
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--checkbox-size) auto;
+  gap: 13px;
+  cursor: pointer;
+  user-select: none;
+
+  .checkbox {
+    display: grid;
+    place-content: center;
+    width: var(--checkbox-size);
+    height: var(--checkbox-size);
+    margin-top: 3px;
+    border: 1px solid var(--stroke-color);
+    border-radius: 2px;
+    transition: var(--transition-duration) border-color;
+
+    svg {
+      position: relative;
+      top: 1px;
+    }
+
+    &.checkbox-error {
+      border-color: var(--error-color);
+    }
+
+    .error-message {
+      position: absolute;
+      top: calc(var(--checkbox-size) + 3px);
+      left: 0;
+      z-index: var(--z-index-dropdown);
+      max-width: 375px;
+      padding: 15px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 17px;
+      color: var(--error-color);
+      pointer-events: none;
+      visibility: hidden;
+      background: var(--block-bg-color);
+      border: 1px solid var(--border-color);
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 4px 19px rgb(0 0 0 / 15%);
+      opacity: 0;
+      transition: var(--transition-duration) opacity;
+
+      &.error-visible {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .signature {
+      font-size: 14px;
+      line-height: 17px;
+      color: var(--stroke-color);
+      cursor: pointer;
+      user-select: none;
+      transition: var(--transition-duration) color;
+
+      a {
+        color: var(--notification-color);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &.checked {
+    .checkbox {
+      background-color: var(--text-color);
+      border-color: var(--text-color);
+    }
+
+    .signature {
+      color: var(--text-color);
+    }
+  }
+
+  &:not(.checked) {
+    svg {
+      rect,
+      path {
+        fill: none;
+      }
+    }
+  }
+
+  &:hover {
+    .checkbox:not(.checkbox-error) {
+      border-color: var(--text-color);
+    }
+
+    .signature {
+      color: rgb(34 34 34 / 70%);
+    }
+  }
+
+  &.disabled {
+    cursor: default;
+
+    .checkbox {
+      border-color: var(--border-color-5);
+    }
+
+    &:hover {
+      .checkbox {
+        border-color: var(--border-color-5);
+      }
+    }
+  }
+}

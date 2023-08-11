@@ -1,0 +1,14 @@
+.container {
+  padding: 31px 37px;
+  background-color: var(--text-color-2);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.title {
+  display: block;
+  padding-bottom: 30px;
+  font-family: var(--russo-one);
+  color: var(--stroke-color);
+  text-transform: uppercase;
+}

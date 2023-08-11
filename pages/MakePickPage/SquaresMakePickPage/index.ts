@@ -1,0 +1,1 @@
+export { SquaresMakePickPage } from './SquaresMakePickPage'

@@ -1,0 +1,48 @@
+.description {
+  padding: 15px 0 50px;
+}
+
+.filter-and-deadline-wrapper {
+  margin-bottom: 30px;
+}
+
+.events-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  gap: 50px;
+  justify-content: space-between;
+}
+
+.button-wrapper {
+  margin-top: 50px;
+
+  &.button-wrapper-double-pick {
+    margin-top: 40px;
+  }
+
+  .selected {
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: 148.52%;
+    text-align: center;
+  }
+
+  .submit {
+    width: 290px;
+    margin: 0 auto;
+  }
+}
+
+.no-entries-wrapper {
+  padding: 30px 20px;
+  background-color: var(--block-bg-color);
+  border-radius: 8px;
+
+  span {
+    font-weight: 600;
+  }
+}
+
+.alert-danger {
+  margin-bottom: 20px;
+}

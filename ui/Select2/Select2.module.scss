@@ -1,0 +1,121 @@
+.fit-content {
+  width: fit-content;
+}
+
+.select-wrapper {
+  position: relative;
+  user-select: none;
+  background-color: var(--block-bg-color);
+
+  .value {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 5px;
+    align-items: center;
+    height: 40px;
+    padding: 10px 0;
+    cursor: pointer;
+
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      &.placeholder {
+        color: var(--stroke-color);
+      }
+
+      span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    svg {
+      transition: var(--transition-duration) transform;
+
+      path {
+        fill: var(--text-color);
+      }
+    }
+  }
+
+  .dropdown {
+    position: absolute;
+    z-index: var(--z-index-dropdown);
+    min-width: 110px;
+    max-height: 208px;
+    line-height: 19px;
+    pointer-events: none;
+    visibility: hidden;
+    background-color: var(--block-bg-color);
+    border-color: var(--block-bg-color);
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 19px rgb(0 0 0 / 15%);
+    opacity: 0;
+    transition: var(--transition-duration) border-color;
+
+    ul {
+      display: grid;
+      max-height: 188px;
+      padding: 0 10px;
+      margin: 10px 0;
+      overflow-y: auto;
+
+      @include mixins.scroll;
+
+      li {
+        padding: 10px;
+        white-space: nowrap;
+        cursor: pointer;
+
+        &:nth-child(even) {
+          background-color: rgba(217 217 217 / 20%);
+        }
+
+        &.disabled {
+          color: var(--stroke-color-2);
+          pointer-events: none;
+          cursor: default;
+        }
+      }
+    }
+  }
+
+  &.dropdown-open {
+    .value {
+      border-color: var(--text-color);
+      border-width: 1px 1px 0;
+      border-radius: 8px 8px 0 0;
+      transition: unset;
+
+      svg {
+        transform: rotate(180deg);
+      }
+
+      span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .dropdown {
+      pointer-events: auto;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &.bold {
+    .value p span {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}

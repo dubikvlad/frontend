@@ -1,0 +1,36 @@
+.wrapper {
+  display: grid;
+  gap: 10px;
+}
+
+.create-entry-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  background-color: var(--block-bg-color);
+  border-radius: 8px;
+
+  button {
+    max-width: 190px;
+    transition: var(--transition-duration) opacity;
+
+    &.create-entry-button-hide {
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+}
+
+.no-data {
+  align-items: center;
+  padding: 35px 30px;
+  background-color: var(--block-bg-color);
+  border-radius: 8px;
+
+  span {
+    font-weight: 600;
+    color: var(--text-color-3);
+    cursor: pointer;
+    border-bottom: 1px solid var(--text-color-3);
+  }
+}

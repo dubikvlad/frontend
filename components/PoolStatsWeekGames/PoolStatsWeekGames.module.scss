@@ -1,0 +1,103 @@
+.week-games {
+  position: relative;
+  height: fit-content;
+  padding-bottom: 25px;
+  overflow: hidden;
+  background: var(--block-bg-color);
+  border-radius: 0 8px 8px 0;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 4px;
+    height: 100%;
+    content: '';
+    background-color: var(--bg-color-10);
+  }
+
+  &-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 22px;
+
+    p {
+      font-family: var(--russo-one);
+      line-height: 19px;
+      color: var(--stroke-color);
+      text-transform: uppercase;
+    }
+  }
+
+  .games {
+    .game {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 25px;
+      align-items: center;
+      padding: 15px 42px;
+
+      &:nth-child(even) {
+        background-color: var(--bg-color-3);
+      }
+
+      .team1 {
+        justify-self: end;
+
+        p {
+          text-align: end;
+        }
+      }
+
+      .team2 {
+        justify-self: start;
+      }
+
+      .team1,
+      .team2 {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        opacity: 0.5;
+
+        &.winner,
+        &.team-shedule {
+          font-weight: 600;
+          opacity: 1;
+        }
+      }
+
+      .result-wrapper {
+        .result {
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 22px;
+        }
+
+        .final-text {
+          display: grid;
+          justify-items: center;
+          font-size: 14px;
+          line-height: 17px;
+          opacity: 0.5;
+        }
+      }
+
+      .start-date {
+        font-size: 14px;
+        line-height: 17px;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.separator {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  opacity: 0.7;
+}

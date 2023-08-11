@@ -1,0 +1,1 @@
+export { GolfPickXLeaderboardTable } from './GolfPickXLeaderboardTable'

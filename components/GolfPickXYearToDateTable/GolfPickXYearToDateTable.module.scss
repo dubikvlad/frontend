@@ -1,0 +1,29 @@
+.grid {
+  grid-template-columns: 3% 4.5% 1fr repeat(3, 20%);
+  border-bottom: 0;
+  border-radius: 0;
+}
+
+.filters {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 22px 20px;
+  margin-bottom: 10px;
+  background: var(--block-bg-color);
+  border-radius: 8px 8px 0 0;
+
+  .groupings-btn {
+    column-gap: 10px;
+    width: 240px;
+    margin-left: auto;
+
+    path {
+      transition: var(--transition-duration);
+    }
+
+    &:hover path {
+      fill: #fff;
+    }
+  }
+}

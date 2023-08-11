@@ -1,0 +1,1 @@
+export { GolfSelectByTournaments } from './GolfSelectByTournaments'

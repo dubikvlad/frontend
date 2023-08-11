@@ -1,0 +1,165 @@
+.wrapper {
+  padding-bottom: 20px;
+  overflow: auto;
+
+  @include mixins.scroll;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  min-width: 1180px;
+  margin-top: 10px;
+}
+
+.row {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 260px;
+
+  &.stage2 {
+    row-gap: 26%;
+  }
+
+  &.stage4 {
+    row-gap: 144px;
+  }
+
+  &.stage8 {
+    row-gap: 24px;
+  }
+
+  .match-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    .match-layout {
+      min-width: 260px;
+      padding: 0 5px 5px;
+      background: var(--error-color);
+      border-radius: 10px;
+
+      &.another-bg {
+        background: var(--button-light-hover-color);
+      }
+
+      &.final {
+        background: var(--button-blue-hover-color);
+      }
+
+      .match-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+          font-size: 12px;
+          line-height: 15px;
+        }
+      }
+    }
+  }
+}
+
+.match-title {
+  width: fit-content;
+  padding: 3px 9px 2px;
+  font-family: var(--inter), sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15px;
+  color: var(--text-color-2);
+  background: var(--error-color);
+  border-radius: 8px 8px 0 0;
+
+  &.another-bg {
+    background: var(--text-color-5);
+  }
+
+  &.final {
+    background: var(--button-blue-hover-color);
+  }
+}
+
+.team {
+  display: grid;
+  grid-template-columns: 45px 1fr 50px;
+  column-gap: 15px;
+  align-items: center;
+  min-width: 250px;
+  height: 55px;
+  padding: 5px 10px;
+  white-space: nowrap;
+  background: var(--text-color-2);
+  border-radius: 8px 8px 0 0;
+
+  &.team-bottom {
+    border-radius: 0 0 8px 8px;
+  }
+
+  .icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .name {
+    font-size: 12px;
+    line-height: 15px;
+    transition: var(--transition-duration) ease;
+
+    & > p:last-child {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 22px;
+    }
+  }
+
+  .empty-text {
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: capitalize;
+  }
+
+  .seed {
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--stroke-color);
+  }
+}
+
+.team + .team {
+  margin-top: 3px;
+}
+
+.line-wrap {
+  position: absolute;
+  left: -42px;
+
+  &.stage4 {
+    &.quarter-top-line {
+      top: 8.5%;
+    }
+
+    &.quarter-bottom-line {
+      bottom: 6.8%;
+    }
+  }
+
+  &.stage2 {
+    &.top {
+      top: 18.2%;
+    }
+
+    &.bottom {
+      bottom: 16.6%;
+    }
+  }
+
+  &.final {
+    top: 30%;
+  }
+}

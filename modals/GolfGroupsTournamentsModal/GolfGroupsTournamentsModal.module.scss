@@ -1,0 +1,49 @@
+.modal {
+  max-width: 1180px;
+  padding: 30px 30px 50px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 29px;
+    }
+  }
+
+  .form {
+    .checkboxes-wrap {
+      display: flex;
+      column-gap: 30px;
+      padding-bottom: 30px;
+      margin-top: 30px;
+
+      .checkbox-wrap + .checkbox-wrap {
+        margin-top: 15px;
+      }
+    }
+
+    .create-group-btn {
+      max-width: 354px;
+      margin: 20px auto 0;
+    }
+  }
+}
+
+.list-option {
+  display: flex;
+  align-items: flex-start;
+  font-size: 14px;
+
+  &:hover {
+    border-color: var(--text-color);
+  }
+}
+
+.input {
+  display: none;
+}

@@ -1,0 +1,39 @@
+.event-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.event-info-text {
+  font-family: var(--russo-one);
+  font-size: 14px;
+  text-transform: uppercase;
+  opacity: 0.4;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  &.full {
+    grid-template-columns: 1fr;
+  }
+}
+
+.no-data {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+
+  p {
+    font-family: var(--russo-one);
+    font-size: 24px;
+    text-transform: uppercase;
+    opacity: 0.4;
+
+    span {
+      opacity: 0.2;
+    }
+  }
+}

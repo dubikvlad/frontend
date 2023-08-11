@@ -1,0 +1,9 @@
+.select-wrap {
+  padding: 22px;
+  background-color: var(--block-bg-color);
+  border-radius: 8px;
+
+  &.with-tab-year-to-date {
+    border-radius: 0 8px 8px 0;
+  }
+}

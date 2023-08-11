@@ -1,0 +1,42 @@
+.pick {
+  padding: 21px 10px 39px 20px;
+
+  &.squares {
+    padding-left: 10px;
+  }
+
+  &.survivor {
+    padding-left: 10px;
+  }
+
+  p.days-left {
+    align-self: flex-end;
+    padding-right: 11px;
+    font-family: var(--russo-one);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: var(--text-color-6);
+  }
+}
+
+.select {
+  padding: 39px 7px 39px 10px;
+
+  &.squares {
+    padding-top: 21px;
+  }
+
+  &.survivor {
+    padding-top: 31px;
+    padding-left: 10px;
+  }
+}
+
+.cup {
+  padding: 28px 16px 39px 17px;
+
+  &.survivor {
+    padding-top: 45px;
+  }
+}

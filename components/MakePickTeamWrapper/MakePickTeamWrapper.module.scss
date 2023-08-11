@@ -1,0 +1,14 @@
+.date {
+  font-family: var(--inter);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: end;
+  user-select: none;
+  opacity: 0.4;
+}
+
+.team-wrapper {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}

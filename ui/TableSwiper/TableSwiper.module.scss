@@ -1,0 +1,39 @@
+.swiper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .inside {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        width: 100%;
+        padding: 0 10px;
+
+      .item {
+        text-align: center;
+      }
+    }
+}
+
+.arrow-container {
+    cursor: pointer;
+    user-select: none;
+
+    svg {
+        path {
+            color: #000;
+            fill: #000;
+        }
+
+        .active {
+            fill: #000;
+        }
+    }
+
+    &.disabled {
+        pointer-events: none;
+        cursor: not-allowed;
+        opacity: 0.4;
+    }
+}

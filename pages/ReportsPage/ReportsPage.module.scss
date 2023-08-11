@@ -1,0 +1,120 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+.reports-info {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 10px;
+  margin-top: 50px;
+
+  & > div {
+    background-color: var(--block-bg-color);
+    border-radius: 8px;
+  }
+
+  .pool-members-info {
+    display: grid;
+    grid-template-columns: 202px 1fr;
+    gap: 35px;
+    padding: 20px 25px;
+
+    .info-1 {
+      .pool-members-text {
+        font-family: var(--russo-one);
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+      }
+
+      .pool-members {
+        margin-top: 15px;
+        font-family: var(--russo-one);
+        font-size: 36px;
+        line-height: 43px;
+      }
+
+      .info-2 {
+        display: flex;
+        gap: 15px;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-right: 21px;
+        margin-top: 15px;
+        border-top: 1px solid var(--border-color);
+
+        p {
+          display: grid;
+          gap: 10px;
+
+          span {
+            font-family: var(--russo-one);
+            font-size: 24px;
+            line-height: 29px;
+          }
+
+          &:last-child {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+
+  .pool-info {
+    padding: 20px 20px 30px;
+
+    &-title {
+      font-family: var(--russo-one);
+      text-transform: uppercase;
+    }
+
+    &-wrapper {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 20px 10px;
+      padding-bottom: 30px;
+      margin: 20px 0 24px;
+      border-bottom: 1px solid var(--border-color);
+
+      .value {
+        font-family: var(--russo-one);
+        word-break: break-all;
+      }
+    }
+
+    .commissioner-info {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 20px 10px;
+
+      .commissioner-value {
+        font-family: var(--russo-one);
+      }
+    }
+  }
+}
+
+.tab-wrapper {
+  padding-top: 20px;
+}
+
+.nhl,
+.custom {
+  color: var(--text-color-3);
+}
+
+.nba,
+.nfl-and-ncaa {
+  color: var(--nba-color);
+}
+
+.mlb {
+  color: var(--mlb-color);
+}
+
+.pga {
+  color: var(--text-color-7);
+}

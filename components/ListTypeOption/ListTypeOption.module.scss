@@ -1,0 +1,44 @@
+.list-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 37px;
+  font-size: 14px;
+  border: 1px solid var(--stroke-color);
+  border-radius: 3px;
+
+  &:not(.disabled) {
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--text-color);
+    }
+  }
+
+  &.active {
+    color: var(--text-color-2);
+    background-color: var(--border-color-4);
+    border-color: var(--border-color-4);
+  }
+
+  &.disbled {
+    color: red;
+    color: var(--stroke-color);
+    pointer-events: none;
+    cursor: default;
+    background: var(--border-color);
+    border-color: var(--border-color);
+
+    &.active {
+      font-weight: 600;
+      color: var(--text-color-2);
+      background-color: var(--bg-color-2);
+      border-color: var(--bg-color-2);
+    }
+  }
+}
+
+.input {
+  display: none;
+}

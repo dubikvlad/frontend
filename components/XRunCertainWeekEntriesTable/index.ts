@@ -1,0 +1,1 @@
+export { XRunCertainWeekEntriesTable } from './XRunCertainWeekEntriesTable'

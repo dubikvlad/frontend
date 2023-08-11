@@ -1,0 +1,41 @@
+.wrapper {
+  display: grid;
+  gap: 20px;
+}
+
+.members-and-entries-wrapper {
+  display: grid;
+  grid-template-columns: 375px 1fr;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.alert-danger {
+  margin-bottom: 10px;
+}
+
+.create-new-entry-button {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 19px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--block-bg-color);
+  border: 1px solid transparent;
+  border-radius: 0 0 8px 8px;
+  transition: var(--transition-duration) border-color,
+    var(--transition-duration) color, var(--transition-duration) opacity;
+
+  &:hover {
+    color: var(--text-color-3);
+    border-color: var(--text-color-3);
+  }
+
+  &.create-new-entry-button-disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}

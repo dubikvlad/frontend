@@ -1,0 +1,29 @@
+.not-grids-wrapper,
+.not-current-grids-wrapper {
+  padding: 45px 30px;
+  background: var(--block-bg-color);
+  border-radius: 8px;
+
+  p {
+    a {
+      font-weight: 600;
+      color: var(--text-color-3);
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.select-wrapper {
+  padding: 20px 25px;
+  margin-bottom: 10px;
+  background-color: var(--block-bg-color);
+
+  .select-title {
+    font-family: var(--russo-one);
+    text-transform: uppercase;
+  }
+}

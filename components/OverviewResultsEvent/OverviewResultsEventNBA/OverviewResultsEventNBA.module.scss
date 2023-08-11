@@ -1,0 +1,166 @@
+.wrapper {
+  padding: 40px 20px 65px;
+  background-color: var(--block-bg-color);
+
+  &:first-child {
+    border-radius: 8px 0 0;
+  }
+
+  &:nth-child(2) {
+    border-radius: 0 8px 0 0;
+  }
+
+  &:nth-last-child(-n + 2):not(:nth-child(even)) {
+    border-radius: 0 0 0 8px;
+  }
+
+  &:nth-last-child(-n + 2):not(:nth-child(odd)) {
+    border-radius: 0 0 8px;
+  }
+
+  &.is-last {
+    border-radius: 0 0 8px;
+  }
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-color);
+  opacity: 0.1;
+}
+
+.points {
+  display: grid;
+  grid-template-columns: 30px 30px 30px 30px 30px;
+  gap: 35px;
+  align-items: center;
+  width: fit-content;
+  padding-left: 10px;
+}
+
+.point {
+  font-size: 14px;
+  text-align: center;
+
+  &.total {
+    font-weight: 600;
+  }
+}
+
+.participants {
+  padding: 0 5px;
+}
+
+.participant {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+
+  .team-name {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+.participants-title {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 0;
+
+  .point {
+    font-weight: 600;
+  }
+}
+
+.results {
+  display: grid;
+  gap: 15px;
+}
+
+.team-result {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+
+  span {
+    font-size: 36px;
+    font-weight: 700;
+    opacity: 0.5;
+  }
+}
+
+.logo {
+  opacity: 0.7;
+}
+
+.teams {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 36px;
+  padding: 0 5px 20px;
+
+  .team {
+    display: flex;
+    flex-direction: column;
+
+    .team-result-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &:last-child {
+      .team-result-wrapper {
+        flex-direction: row-reverse;
+      }
+
+      .team-result {
+        flex-direction: row-reverse;
+      }
+
+      .arrow {
+        transform: rotate(180deg);
+      }
+
+      span {
+        text-align: right;
+      }
+    }
+
+    &.winner {
+      .arrow {
+        path {
+          fill: var(--text-color);
+        }
+      }
+
+      .team-result {
+        span {
+          opacity: 1;
+        }
+      }
+
+      .team-name {
+        opacity: 1;
+      }
+
+      .logo {
+        opacity: 1;
+      }
+    }
+  }
+
+  .team-name {
+    min-height: 38px;
+    margin-top: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    opacity: 0.5;
+  }
+}
+
+.final {
+  margin-top: 12px;
+  text-transform: uppercase;
+}

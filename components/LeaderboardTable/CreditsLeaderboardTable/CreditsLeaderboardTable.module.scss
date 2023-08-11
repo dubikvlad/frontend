@@ -1,0 +1,144 @@
+.wrapper {
+  display: grid;
+  gap: 10px;
+}
+
+.table-wrapper {
+  display: grid;
+  gap: 5px;
+  padding-bottom: 20px;
+
+  &.table-not-found {
+    padding: 27px 30px;
+    background-color: var(--block-bg-color);
+    border-radius: 0 0 8px 8px;
+  }
+
+  --gap: 20px;
+  --grid-template-columns: calc(4.38% - var(--gap)) calc(4.21% - var(--gap))
+    calc(23.24% - var(--gap)) calc(12.89% - var(--gap))
+    calc(14.91% - var(--gap)) calc(12.71% - var(--gap))
+    calc(12.01% - var(--gap)) 15.65%;
+
+  .table-head {
+    display: grid;
+    grid-template-columns: var(--grid-template-columns);
+    gap: var(--gap);
+    padding: 15px 10px 15px 20px;
+    background: var(--block-bg-color);
+    border-radius: 8px 8px 0 0;
+
+    p {
+      font-size: 14px;
+      color: var(--stroke-color);
+    }
+
+    .sort-head {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+
+      .active {
+        color: var(--text-color);
+      }
+
+      &.points-head {
+        margin-left: 10px;
+      }
+    }
+
+    .star-wrapper {
+      svg {
+        width: 23px;
+        height: auto;
+        margin: 0 auto;
+
+        path {
+          stroke: var(--favorites-color);
+        }
+      }
+    }
+  }
+
+  .table-body-wrapper {
+    padding: 0 10px 20px;
+    background-color: var(--block-bg-color);
+
+    .leaderboard-item {
+      display: grid;
+      grid-template-columns: var(--grid-template-columns);
+      gap: var(--gap);
+      align-items: center;
+      padding-left: 10px;
+      background-color: var(--block-bg-color);
+
+      &:nth-child(odd) {
+        background-color: var(--bg-color-3);
+      }
+
+      & > * {
+        padding: 10px 0;
+      }
+
+      .star {
+        margin: 0 auto;
+
+        path {
+          fill: var(--favorites-color);
+          stroke: var(--favorites-color);
+        }
+      }
+
+      .point-wrapper {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 10px;
+        font-weight: 600;
+        background-color: rgb(126 155 223 / 10%);
+      }
+
+      .win-credits {
+        color: var(--success-color);
+      }
+
+      .loss-credits {
+        color: var(--error-color);
+      }
+
+      &.user-entry {
+        background-color: var(--bg-color-4);
+
+        .point-wrapper {
+          background-color: var(--bg-color-6);
+        }
+      }
+
+      .short-name-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 23px;
+        background-color: transparent;
+        border-radius: 3px;
+
+        p {
+          font-size: 10px;
+          font-weight: 900;
+          color: var(--text-color-2);
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .not-found {
+    span {
+      font-weight: 600;
+      word-break: break-all;
+    }
+  }
+}

@@ -1,0 +1,324 @@
+.entry-list {
+  display: grid;
+  gap: 2px;
+  margin-top: 10px;
+}
+
+.entry-item {
+  position: relative;
+  padding: 20px 20px 25px 25px;
+  overflow: hidden;
+  background-color: var(--block-bg-color);
+
+  &:first-child {
+    border-radius: 8px 8px 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 8px 8px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 4px;
+    height: 100%;
+    content: '';
+    background-color: transparent;
+  }
+
+  .short-entry-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 23px;
+    padding: 4px 7px;
+    background-color: transparent;
+    border-radius: 3px;
+
+    p {
+      font-size: 10px;
+      font-weight: 900;
+      color: var(--text-color-2);
+      text-transform: uppercase;
+    }
+  }
+
+  &:nth-child(3n + 1) {
+    &::after {
+      background-color: var(--leaderboard-color-17);
+    }
+
+    .short-entry-name {
+      background-color: var(--leaderboard-color-17);
+    }
+
+    .full-stats-table {
+      .full-stats-table-body {
+        &:nth-child(even) {
+          p:not(:first-child) {
+            background-color: rgb(194 130 70 / 40%);
+
+            &.loses-text {
+              background-color: rgb(194 130 70 / 45%);
+            }
+
+            &.points-text {
+              background-color: rgb(194 130 70 / 50%);
+            }
+          }
+        }
+
+        &:nth-child(odd) {
+          p:not(:first-child) {
+            background-color: rgb(194 130 70 / 10%);
+
+            &.loses-text {
+              background-color: rgb(194 130 70 / 13%);
+            }
+
+            &.points-text {
+              background-color: rgb(194 130 70 / 16%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &:nth-child(3n + 2) {
+    &::after {
+      background-color: var(--leaderboard-color-8);
+    }
+
+    .short-entry-name {
+      background-color: var(--leaderboard-color-8);
+    }
+
+    .full-stats-table {
+      .full-stats-table-body {
+        &:nth-child(even) {
+          p:not(:first-child) {
+            background-color: rgb(124 87 171 / 40%);
+
+            &.loses-text {
+              background-color: rgb(124 87 171 / 45%);
+            }
+
+            &.points-text {
+              background-color: rgb(124 87 171 / 50%);
+            }
+          }
+        }
+
+        &:nth-child(odd) {
+          p:not(:first-child) {
+            background-color: rgb(124 87 171 / 10%);
+
+            &.loses-text {
+              background-color: rgb(124 87 171 / 13%);
+            }
+
+            &.points-text {
+              background-color: rgb(124 87 171 / 16%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &:nth-child(3n + 3) {
+    &::after {
+      background-color: var(--leaderboard-color-14);
+    }
+
+    .short-entry-name {
+      background-color: var(--leaderboard-color-14);
+    }
+
+    .full-stats-table {
+      .full-stats-table-body {
+        &:nth-child(even) {
+          p:not(:first-child) {
+            background-color: rgb(87 171 111 / 40%);
+
+            &.loses-text {
+              background-color: rgb(87 171 111 / 45%);
+            }
+
+            &.points-text {
+              background-color: rgb(87 171 111 / 50%);
+            }
+          }
+        }
+
+        &:nth-child(odd) {
+          p:not(:first-child) {
+            background-color: rgb(87 171 111 / 10%);
+
+            &.loses-text {
+              background-color: rgb(87 171 111 / 13%);
+            }
+
+            &.points-text {
+              background-color: rgb(87 171 111 / 16%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.entry-item-main-block {
+  position: relative;
+  display: grid;
+  grid-template-columns: 245px 1fr 80px;
+  gap: 20px;
+  justify-content: space-between;
+
+  .entry-block {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-top: 8px;
+  }
+}
+
+.head-text {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--stroke-color);
+}
+
+.stats-text {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 30px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--stroke-color);
+  cursor: pointer;
+  user-select: none;
+
+  svg {
+    width: 11px;
+    height: auto;
+
+    path {
+      stroke: var(--stroke-color);
+    }
+  }
+
+  &.full-stats-is-open {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.pickem-forecasts-wrapper {
+  display: grid;
+  grid-template-columns: repeat(15, 40px);
+  gap: 10px;
+  align-items: center;
+}
+
+.pickem-forecasts-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  background-color: var(--border-color);
+  border-radius: 3px;
+
+  &.win {
+    background-color: var(--win-color);
+  }
+
+  &.lost {
+    background-color: var(--lost-color);
+  }
+}
+
+.win-and-lost-info {
+  font-family: var(--russo-one);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.full-stats-wrapper {
+  display: none;
+  padding-top: 15px;
+  margin-top: 38px;
+  border-top: 1px solid var(--border-color);
+
+  &.full-stats-wrapper-open {
+    display: block;
+  }
+}
+
+.full-stats-table {
+  max-width: 835px;
+  margin: 0 auto;
+
+  &-row {
+    display: grid;
+    grid-template-columns: 1fr repeat(4, 185px);
+    align-items: center;
+
+    &.full-stats-table-head {
+      p {
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--stroke-color);
+        text-align: center;
+      }
+    }
+
+    &.full-stats-table-body {
+      p {
+        padding: 10px 0;
+        text-align: center;
+
+        &:first-child {
+          font-size: 14px;
+          font-weight: 600;
+          color: var(--stroke-color);
+          text-align: start;
+          text-transform: uppercase;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+.statistics-are-not-ready {
+  display: grid;
+  gap: 20px;
+  padding: 20px 30px;
+  margin-top: 10px;
+  background: var(--block-bg-color);
+  border-radius: 8px;
+
+  a {
+    font-weight: 600px;
+    color: var(--text-color-3);
+    cursor: pointer;
+    border-bottom: 1px solid var(--text-color-3);
+  }
+}

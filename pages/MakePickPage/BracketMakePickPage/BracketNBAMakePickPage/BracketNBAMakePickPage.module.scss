@@ -1,0 +1,27 @@
+.main {
+    .title {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        margin-bottom: 15px;
+
+        svg {
+            width: 25px;
+            height: auto;
+            cursor: pointer;
+
+            path {
+                fill: var(--stroke-color);
+            }
+        }
+    }
+
+    .sub-title {
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    .description-text {
+        margin-bottom: 50px;
+    }
+}

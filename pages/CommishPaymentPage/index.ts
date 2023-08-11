@@ -1,0 +1,1 @@
+export { CommishPaymentPage } from './CommishPaymentPage'

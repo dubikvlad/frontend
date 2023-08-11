@@ -1,0 +1,1 @@
+export { QARules } from './QARules'

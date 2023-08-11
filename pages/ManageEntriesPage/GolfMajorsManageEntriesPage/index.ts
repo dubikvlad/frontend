@@ -1,0 +1,1 @@
+export { GolfMajorsManageEntriesPage } from './GolfMajorsManageEntriesPage'

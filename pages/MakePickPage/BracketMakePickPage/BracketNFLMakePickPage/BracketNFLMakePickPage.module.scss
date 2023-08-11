@@ -1,0 +1,276 @@
+.main {
+  .title {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    margin-bottom: 15px;
+
+    svg {
+      width: 25px;
+      height: auto;
+      cursor: pointer;
+
+      path {
+        fill: var(--stroke-color);
+      }
+    }
+  }
+
+  .sub-title {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .description-text {
+    margin-bottom: 50px;
+  }
+}
+
+.wrapper {
+  overflow: auto;
+
+  @include mixins.scroll;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  min-width: 1180px;
+  margin-top: 27px;
+}
+
+.row {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 260px;
+
+  &.stage2 {
+    row-gap: 26%;
+  }
+
+  &.stage4 {
+    row-gap: 107px;
+  }
+
+  &.stage8 {
+    row-gap: 24px;
+  }
+
+  .match-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    .match-layout {
+      min-width: 260px;
+      border-radius: 10px;
+
+      .match-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+          font-size: 12px;
+          line-height: 15px;
+        }
+      }
+    }
+  }
+}
+
+.match-title {
+  width: fit-content;
+  padding: 3px 9px 2px;
+  font-family: var(--inter), sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--text-color-2);
+  background: var(--error-color);
+  border-radius: 8px 8px 0 0;
+
+  &.another-bg {
+    background: var(--button-light-hover-color);
+  }
+
+  &.final {
+    background: var(--button-blue-hover-color);
+  }
+}
+
+.team {
+  display: grid;
+  grid-template-columns: 45px 1fr 50px;
+  column-gap: 15px;
+  align-items: center;
+  min-width: 250px;
+  height: 55px;
+  padding: 5px 10px;
+  white-space: nowrap;
+  cursor: pointer;
+  background: var(--block-bg-color);
+  border: 1px solid transparent;
+  border-radius: 0 8px 0 0;
+  transition: var(--transition-duration) ease;
+
+  &.team-bottom {
+    border-radius: 0 0 8px 8px;
+  }
+
+  &:hover {
+    border: 1px solid var(--button-blue-color);
+
+    .name {
+      color: var(--button-blue-color);
+    }
+  }
+
+  &.final-pick {
+    border: 1px solid var(--text-color);
+  }
+
+  &.error {
+    border: 1px solid var(--error-color);
+  }
+
+  .icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .name {
+    font-size: 12px;
+    line-height: 15px;
+    transition: var(--transition-duration) ease;
+
+    & > p:last-child {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 22px;
+    }
+  }
+
+  .empty-text {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    color: var(--button-blue-color);
+    text-transform: capitalize;
+  }
+
+  .seed {
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--stroke-color);
+  }
+}
+
+.team + .team {
+  margin-top: 3px;
+}
+
+.line-wrap {
+  position: absolute;
+  left: -42px;
+
+  &.stage4 {
+    &.quarter-top-line {
+      top: 8.5%;
+    }
+
+    &.quarter-bottom-line {
+      bottom: 6.5%;
+    }
+  }
+
+  &.stage2 {
+    &.top {
+      top: 20.1%;
+    }
+
+    &.bottom {
+      bottom: 18.1%;
+    }
+  }
+
+  &.final {
+    top: 30%;
+  }
+}
+
+.form-container {
+  position: absolute;
+  transform: translateY(134px);
+
+  .tiebreak-form {
+    display: grid;
+    grid-template-columns: 6.5fr 3.5fr;
+    padding: 10px 15px;
+    margin-bottom: 9px;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: var(--block-bg-color);
+    border-radius: 8px;
+
+    .text {
+      display: flex;
+      align-items: center;
+
+      & > span {
+        &:first-child {
+          font-weight: 600;
+        }
+
+        &:last-child {
+          font-weight: 400;
+        }
+      }
+    }
+
+    span {
+      font-size: 14px;
+    }
+
+    .input {
+      height: 40px;
+    }
+  }
+
+  .submit-button {
+    &.disabled {
+      opacity: 0.5;
+    }
+  }
+}
+
+.tiebreaker-block-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .text {
+    display: flex;
+    align-items: center;
+
+    & > span {
+      font-size: 12px;
+
+      &:first-child {
+        font-weight: 600;
+      }
+
+      &:last-child {
+        font-weight: 400;
+      }
+    }
+  }
+
+  span {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}

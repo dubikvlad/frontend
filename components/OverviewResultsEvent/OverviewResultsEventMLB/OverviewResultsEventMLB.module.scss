@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  padding: 25px 60px 40px 30px;
+  background-color: var(--block-bg-color);
+
+  &:first-child {
+    border-radius: 8px 8px 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0.5;
+
+  &.winner {
+    opacity: 1;
+  }
+}
+
+.team-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.total {
+  font-size: 16px;
+  font-weight: 800;
+}

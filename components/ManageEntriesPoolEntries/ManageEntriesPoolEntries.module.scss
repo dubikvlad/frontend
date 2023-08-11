@@ -1,0 +1,143 @@
+.table {
+  display: grid;
+  gap: 5px;
+
+  &-row {
+    display: grid;
+    grid-template-columns: 1fr 130px 145px 171px 320px 93px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-head {
+    padding: 16px 0 16px 20px;
+    background: var(--block-bg-color);
+    border-radius: 8px 8px 0 0;
+
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 17px;
+      color: var(--stroke-color);
+    }
+
+    .sortable-item {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+
+      &.sortable-item-active {
+        p {
+          color: var(--text-color);
+        }
+      }
+    }
+  }
+
+  &-body {
+    padding-bottom: 50px;
+    background: var(--block-bg-color);
+    border-radius: 0 0 8px 8px;
+
+    .table-row {
+      min-height: 50px;
+      padding-left: 20px;
+
+      &:nth-child(even) {
+        background-color: var(--bg-color-3);
+
+        .with-bg {
+          background-color: var(--bg-color-13);
+        }
+      }
+
+      .indented {
+        padding: 13px 30px;
+      }
+
+      &.table-row-user {
+        background-color: var(--bg-color-4);
+
+        .with-bg {
+          background-color: var(--bg-color-17);
+        }
+      }
+    }
+  }
+}
+
+.yes {
+  font-weight: 600;
+  color: var(--stroke-color);
+}
+
+.no {
+  span {
+    font-weight: 600;
+  }
+}
+
+.indented {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 30px;
+  word-break: break-all;
+}
+
+.with-bg {
+  background-color: var(--bg-color-14);
+}
+
+.bell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+
+  svg {
+    cursor: pointer;
+
+    &:hover {
+      animation: bell 1s ease;
+    }
+
+    path {
+      stroke: var(--text-color);
+    }
+  }
+}
+
+.icon-favorite {
+  width: 23px;
+  height: auto;
+  fill: var(--favorites-color);
+
+  path {
+    stroke: var(--favorites-color);
+  }
+}
+
+@keyframes bell {
+  20% {
+    transform: rotate(15deg);
+  }
+
+  40% {
+    transform: rotate(-15deg);
+  }
+
+  60% {
+    transform: rotate(10deg);
+  }
+
+  80% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}

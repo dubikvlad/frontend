@@ -1,0 +1,96 @@
+.row {
+    display: grid;
+    grid-template-columns: 100px repeat(5, 3fr);
+    padding: 10px 20px;
+}
+
+.thead {
+    margin-bottom: 5px;
+    background-color: var(--block-bg-color);
+    border-radius: 8px 8px 0 0;
+
+    div {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        color: var(--stroke-color);
+
+        &.team {
+            justify-content: flex-start;
+        }
+    }
+}
+
+.tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+
+.entries-row {
+    display: grid;
+    grid-template-columns: 100px 3fr 12.5fr;
+}
+
+.team-row {
+    cursor: pointer;
+    background-color: var(--block-bg-color);
+
+    &.closed {
+        transition: all 0.1s ease;
+
+        &:hover {
+            box-shadow: 0 0 0 1px var(--border-color-4) inset;
+        }
+    }
+}
+
+.team-name {
+    div:first-child {
+        font-size: 12px;
+    }
+
+    div:last-child {
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+
+.team-col {
+    display: flex;
+    align-items: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.entries-table {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    .table-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding:4px 20px;
+        font-size: 14px;
+        background-color: var(--body-bg-color);
+
+        &:nth-child(2n) {
+            background-color: transparent;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+
+.no-teams {
+    padding: 10px 30px;
+    font-size: 16px;
+    background-color: var(--block-bg-color);
+}

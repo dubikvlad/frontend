@@ -1,0 +1,133 @@
+.entry-settings {
+  position: relative;
+
+  &-list {
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    z-index: var(--z-index-dropdown);
+    min-width: 167px;
+    height: auto;
+    padding: 10px 0;
+    pointer-events: none;
+    visibility: hidden;
+    user-select: none;
+    background: var(--block-bg-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    opacity: 0;
+    transition: var(--transition-duration);
+
+    &.entry-settings-list-is-open {
+      pointer-events: initial;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .entry-settings-list-item {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 15px;
+      align-items: center;
+      padding: 7px 14px;
+      cursor: pointer;
+      transition: var(--transition-duration) background-color;
+
+      /* stylelint-disable-next-line no-descending-specificity */
+      svg {
+        width: 24px;
+        height: 24px;
+
+        path {
+          fill: var(--text-color);
+          transition: var(--transition-duration) fill;
+        }
+      }
+
+      /* stylelint-disable-next-line no-descending-specificity */
+      p {
+        width: fit-content;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        color: var(--text-color);
+        border-bottom: 1px solid transparent;
+        transition: var(--transition-duration) border;
+      }
+
+      &:hover {
+        background-color: rgb(217 217 217 / 30%);
+
+        p {
+          border-bottom: 1px solid var(--text-color);
+        }
+
+        .entry-pencil {
+          path {
+            fill: var(--text-color-5);
+          }
+        }
+
+        .entry-change-circle {
+          path {
+            fill: var(--success-color);
+          }
+        }
+
+        .entry-delete-forever {
+          path {
+            fill: var(--error-color);
+          }
+        }
+      }
+    }
+
+    &.confirm-deletion {
+      .entry-settings-list-item {
+        pointer-events: none;
+        opacity: 0.1;
+
+        &.confirm-deletion-item {
+          pointer-events: initial;
+          background-color: rgb(217 217 217 / 30%);
+          opacity: 1;
+
+          .entry-delete-forever {
+            path {
+              fill: var(--error-color);
+            }
+          }
+
+          p {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 15px;
+            border-bottom: 1px solid transparent;
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+
+    .delete-text {
+      display: flex;
+      justify-content: center;
+      margin: 10px 0 2px;
+
+      span {
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        cursor: pointer;
+        border-bottom: 1px solid var(--text-color);
+        transition: var(--transition-duration) color,
+          var(--transition-duration) border-color;
+
+        &:hover {
+          color: var(--text-color-3);
+          border-bottom: 1px solid var(--text-color-3);
+        }
+      }
+    }
+  }
+}

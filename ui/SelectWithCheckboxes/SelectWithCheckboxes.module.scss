@@ -1,0 +1,154 @@
+.select-wrapper {
+  position: relative;
+  user-select: none;
+  background-color: var(--block-bg-color);
+
+  .value {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 5px;
+    align-items: center;
+    height: 40px;
+    padding: 10px 0;
+    cursor: pointer;
+
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      .label {
+        z-index: var(--z-index-initial);
+        display: none;
+        font-size: 10px;
+        line-height: 12px;
+        color: var(--stroke-color);
+        transition: var(--transition-duration) color;
+      }
+
+      span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    svg {
+      transition: var(--transition-duration) transform;
+
+      path {
+        fill: var(--text-color);
+      }
+    }
+  }
+
+  .dropdown {
+    position: absolute;
+    z-index: var(--z-index-dropdown);
+    width: 100%;
+    min-width: 200px;
+    max-height: 215px;
+    line-height: 19px;
+    pointer-events: none;
+    visibility: hidden;
+    background-color: var(--block-bg-color);
+    border-color: var(--block-bg-color);
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 19px rgb(0 0 0 / 15%);
+    opacity: 0;
+    transition: var(--transition-duration) border-color;
+
+    ul {
+      display: grid;
+      max-height: 195px;
+      padding: 0 10px;
+      margin: 10px 0;
+      overflow-y: auto;
+
+      @include mixins.scroll;
+
+      li {
+        padding: 10px;
+        cursor: pointer;
+
+        &:nth-child(even) {
+          background-color: rgba(217 217 217 / 20%);
+        }
+
+        &.item {
+          display: grid;
+          grid-template-columns: auto 1fr;
+          gap: 15px;
+          align-items: center;
+
+          .checkbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 14px;
+            height: 14px;
+            border: 1px solid var(--stroke-color);
+            border-radius: 2px;
+            transition: var(--transition-duration) border-color;
+
+            .checkmark {
+              position: relative;
+              top: 1px;
+
+              rect,
+              path {
+                fill: transparent;
+              }
+            }
+
+            &.checkbox-active {
+              background-color: var(--text-color);
+              border-color: var(--text-color);
+
+              .checkmark {
+                rect,
+                path {
+                  fill: var(--block-bg-color);
+                }
+              }
+            }
+          }
+
+          &:hover {
+            .checkbox {
+              border-color: var(--text-color);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.dropdown-open {
+    .value {
+      border-color: var(--text-color);
+      border-width: 1px 1px 0;
+      border-radius: 8px 8px 0 0;
+      transition: unset;
+
+      svg {
+        transform: rotate(180deg);
+      }
+
+      span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .dropdown {
+      pointer-events: auto;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+    opacity: .5;
+  }
+}

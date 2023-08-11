@@ -1,0 +1,15 @@
+.wrapper {
+  display: grid;
+  gap: 10px;
+}
+
+.no-data {
+  padding: 35px 30px;
+  background-color: var(--block-bg-color);
+  border-radius: 8px;
+
+  span {
+    font-weight: 600;
+    word-break: break-all;
+  }
+}

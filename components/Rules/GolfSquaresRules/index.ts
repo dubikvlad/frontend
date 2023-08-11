@@ -1,0 +1,1 @@
+export { GolfSquaresRules } from './GolfSquaresRules'

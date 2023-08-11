@@ -1,0 +1,74 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+
+.fixed-price-wrapper {
+  padding: 15px 30px;
+  background: var(--block-bg-color);
+  border-radius: 8px;
+
+  .fixed-text {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 148.52%;
+    color: var(--text-color-3);
+  }
+
+  .price {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 58px;
+  }
+
+  .per-pool-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: var(--stroke-color);
+  }
+}
+
+.submit-and-total-wrapper {
+  display: grid;
+  gap: 2px;
+
+  .submit-payment-text {
+    display: flex;
+    justify-content: center;
+    padding: 26px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 148.52%;
+    background-color: var(--block-bg-color);
+    border-radius: 8px 8px 0 0;
+  }
+
+  .total-wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 35px;
+    align-items: center;
+    padding: 10px 20px 10px 25px;
+    background-color: var(--block-bg-color);
+    border-radius: 0 0 8px 8px;
+
+    .total-text {
+      font-size: 24px;
+    }
+
+    .total-price {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    button {
+      width: 200px;
+      height: 60px;
+      font-family: var(--russo-one);
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+}

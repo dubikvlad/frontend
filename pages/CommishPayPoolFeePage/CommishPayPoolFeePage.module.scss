@@ -1,0 +1,274 @@
+.wrapper {
+  display: grid;
+  gap: 40px;
+  align-content: start;
+}
+
+.pay-pool-fee-wrapper {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 20px;
+}
+
+.steps-wrapper {
+  padding: 20px;
+  background: var(--block-bg-color);
+  border-radius: 8px;
+
+  .steps {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+
+    p {
+      font-size: 14px;
+      line-height: 17px;
+      color: var(--stroke-color);
+      cursor: pointer;
+      user-select: none;
+
+      &.step-active {
+        color: var(--text-color);
+        cursor: default;
+      }
+    }
+
+    svg {
+      width: 6px;
+      height: auto;
+
+      path {
+        opacity: 0.4;
+        stroke: var(--text-color);
+      }
+    }
+  }
+
+  .title {
+    margin: 20px 0 30px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .description {
+    display: grid;
+    gap: 20px;
+
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--border-color-3);
+    }
+  }
+}
+
+.step-1-wrapper {
+  display: none;
+  gap: 20px;
+  padding: 20px;
+  background: var(--block-bg-color);
+  border-radius: 8px;
+
+  &.step-1-wrapper-visible {
+    display: grid;
+  }
+
+  .two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .next-button {
+    justify-self: end;
+    width: 200px;
+    height: 60px;
+    font-family: var(--russo-one);
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}
+
+.step-2-wrapper {
+  display: none;
+  gap: 20px;
+  height: 100%;
+
+  &.step-2-wrapper-visible {
+    display: grid;
+  }
+
+  .payment-information-wrapper {
+    display: grid;
+    gap: 10px;
+
+    .pool-info-and-total-info-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+
+      .pool-info-wrapper {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 20px;
+        align-content: start;
+        padding: 20px;
+        background: var(--block-bg-color);
+        border-radius: 8px;
+
+        p {
+          &:nth-child(odd) {
+            font-weight: 600;
+          }
+
+          &:nth-child(even) {
+            text-align: end;
+          }
+        }
+      }
+
+      .total-info-wrapper {
+        padding: 20px;
+        background: var(--block-bg-color);
+        border-radius: 8px;
+
+        .actual-balance-wrapper {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+
+          .actual-balance {
+            font-weight: 700;
+          }
+        }
+
+        .coupon-code {
+          position: relative;
+          height: 60px;
+
+          input {
+            height: 60px;
+            padding: 20px 126px 20px 14px;
+          }
+
+          button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 112px;
+            height: 62px;
+            font-family: var(--russo-one);
+            font-weight: 400;
+            text-transform: uppercase;
+            border-radius: 0 8px 8px 0;
+          }
+        }
+
+        .total-info {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 22px;
+          margin: 20px 0;
+
+          p {
+            &:nth-child(even) {
+              text-align: end;
+            }
+          }
+        }
+
+        .total-price {
+          display: flex;
+          justify-content: space-between;
+          padding-top: 20px;
+          border-top: 1px solid var(--border-color);
+
+          p {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 22px;
+          }
+        }
+
+        .alert {
+          margin-top: 20px;
+          margin-bottom: -10px;
+        }
+
+        .confirm-payment,
+        .replenish-button {
+          width: 200px;
+          height: 60px;
+          margin: 30px auto 10px;
+          font-family: var(--russo-one);
+          font-size: 16px;
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+.modal-wrapper {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  width: 849px;
+  padding: 20px 56px 40px 20px;
+
+  .cross-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+
+    svg {
+      width: 16px;
+      height: 16px;
+
+      path {
+        stroke: var(--text-color);
+        stroke-width: 3px;
+      }
+    }
+  }
+
+  .notification-text {
+    position: absolute;
+    top: calc(50% + 16px);
+    right: -61px;
+    font-family: var(--russo-one);
+    font-size: 24px;
+    line-height: 148.52%;
+    text-transform: uppercase;
+    opacity: 0.1;
+    transform: translateY(-50%) rotate(270deg);
+  }
+
+  .modal-title {
+    font-family: var(--russo-one);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 43px;
+    color: var(--text-color-7);
+    text-transform: uppercase;
+  }
+
+  .modal-text {
+    margin: 60px 0;
+    text-align: center;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  .modal-btn {
+    width: 100%;
+    max-width: 240px;
+  }
+}

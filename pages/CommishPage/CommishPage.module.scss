@@ -1,0 +1,13 @@
+.table-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tabs {
+  position: sticky;
+  top: 72px;
+  z-index: var(--z-index-tabs);
+  margin-top: 10px;
+  background: var(--body-bg-color);
+}

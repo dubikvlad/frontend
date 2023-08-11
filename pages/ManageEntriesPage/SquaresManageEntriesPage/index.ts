@@ -1,0 +1,1 @@
+export { SquaresManageEntriesPage } from './SquaresManageEntriesPage'

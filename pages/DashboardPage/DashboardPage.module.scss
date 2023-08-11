@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 56px;
+  margin-bottom: 10px;
+
+  @include adaptive.custom(668px) {
+    margin-top: 48px;
+  }
+
+  @include adaptive.sm {
+    margin-bottom: -20px;
+  }
+
+  h1 {
+    margin-bottom: 40px;
+
+    @include adaptive.lg {
+      margin-bottom: 30px;
+    }
+
+    @include adaptive.md {
+      margin-bottom: 50px;
+    }
+
+    @include adaptive.custom(668px) {
+      margin-bottom: 30px;
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+}

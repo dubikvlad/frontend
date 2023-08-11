@@ -1,0 +1,67 @@
+.wrapper {
+  position: relative;
+  width: 849px;
+  padding: 55px 50px 40px;
+
+  h3 {
+    font-family: var(--russo-one);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 43px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .text {
+    max-width: 475px;
+    margin: 30px auto 48px;
+    line-height: 150%;
+    text-align: center;
+
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
+.cross-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+
+  svg {
+    width: 16px;
+    height: 16px;
+
+    path {
+      stroke: var(--stroke-color);
+      stroke-width: 3px;
+      transition: var(--transition-duration) stroke;
+    }
+  }
+
+  &:hover {
+    svg path {
+      stroke: var(--text-color);
+    }
+  }
+}
+
+.back-to-the-sign-in-text {
+  font-size: 14px;
+  color: var(--text-color-3);
+  cursor: pointer;
+}
+
+.notification-text {
+  position: absolute;
+  top: 50%;
+  right: -61px;
+  font-family: var(--russo-one);
+  font-size: 24px;
+  text-transform: uppercase;
+  user-select: none;
+  opacity: 0.1;
+  transform: rotate(270deg);
+}

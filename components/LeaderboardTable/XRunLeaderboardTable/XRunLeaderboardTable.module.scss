@@ -1,0 +1,83 @@
+.container {
+  display: grid;
+  gap: 10px;
+}
+
+.not-found {
+  padding: 27px 30px;
+  background-color: var(--block-bg-color);
+}
+
+.star-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .star {
+    path {
+      stroke: var(--favorites-color);
+    }
+  }
+}
+
+.grid {
+  grid-template-columns: 4.5% 20% 855px;
+}
+
+.item-name-wrap {
+  height: 23px;
+
+  .item-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 23px;
+    margin: 0 2px;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: var(--text-color-2);
+    border-radius: 3px;
+  }
+}
+
+.forecast-wrap {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  column-gap: 14px;
+  justify-content: space-between;
+
+  .team-info {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    height: 50px;
+    padding: 2px;
+    text-align: center;
+    background-color: var(--body-bg-color);
+    border-radius: 3px;
+
+    &.win {
+      background-color: var(--success-color);
+    }
+
+    .image-wrap {
+      padding: 3px;
+      background-color: #F5F5F5;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .score {
+      font-size: 18px;
+      font-weight: 600;
+
+      &.win {
+        color: var(--text-color-2);
+      }
+    }
+  }
+}
